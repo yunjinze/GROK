@@ -1,0 +1,278 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+       
+
+        /* 导航 */
+        /* nav { 
+            background: #333; 
+            padding: 15px 0; 
+            margin-bottom: 30px;
+        }
+        nav .container { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+        }
+        .logo { 
+            color: #e6c229; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 1.2rem;
+        }
+        .nav-links a { 
+            color: #ddd; 
+            text-decoration: none; 
+            margin-left: 20px;
+        }
+        .nav-links a:hover { color: #e6c229; } */
+
+        /* 主内容 */
+        header { text-align: center; margin: 30px 0; }
+        h1 { color: #e6c229; margin-bottom: 10px; }
+        .subtitle { color: #bbb; font-size: 0.9rem; }
+        
+        .main-img { 
+            width: 100%; 
+            max-width: 600px; 
+            height: 300px; 
+            object-fit: cover; 
+            margin: 0 auto 30px; 
+            display: block; 
+            border-radius: 5px;
+        }
+        
+        .trivia-list { 
+            background: #2d2d2d; 
+            padding: 25px; 
+            border-radius: 5px;
+        }
+        .trivia-item { 
+            margin-bottom: 20px; 
+            padding-bottom: 20px; 
+            border-bottom: 1px dashed #444;
+        }
+        .trivia-item:last-child { 
+            margin-bottom: 0; 
+            padding-bottom: 0; 
+            border-bottom: none;
+        }
+        .trivia-title { 
+            color: #e6c229; 
+            margin-bottom: 8px; 
+            font-size: 1.1rem;
+        }
+
+        /* 页脚 */
+        footer { 
+            text-align: center; 
+            margin-top: 40px; 
+            color: #777; 
+            font-size: 0.9rem;
+        }
+        .lotr-facts-page {
+            padding: 2rem 4rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .section-title {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .section-desc {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .lotr-facts-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+        .fact-item {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        .fact-item:hover {
+            transform: translateY(-8px);
+        }
+        .fact-img-link {
+            display: block;
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+        }
+        .fact-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: scale 0.5s ease;
+        }
+        .fact-item:hover .fact-img {
+            scale: 1.05;
+        }
+        .fact-content {
+            padding: 1.5rem;
+        }
+        .fact-subtitle {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .fact-text {
+            font-size: 1rem;
+            color: #34495e;
+            line-height: 1.6;
+        }
+
+        .cold-facts-page {
+      padding: 2rem 4rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .section-title {
+      font-size: 2rem;
+      color: #2c3e50;
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .section-desc {
+      font-size: 1.1rem;
+      color: #7f8c8d;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .cold-facts-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2.5rem;
+    }
+    /* 冷知识卡片样式优化 + 收藏功能 */
+    .movie-fact-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+      position: relative;
+    }
+    .movie-fact-card:hover {
+      transform: translateY(-8px);
+    }
+    .fact-img-link {
+      display: block;
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+    }
+    .fact-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: scale 0.5s ease;
+    }
+    .movie-fact-card:hover .fact-img {
+      scale: 1.05;
+    }
+    .fact-movie-title {
+      font-size: 1.3rem;
+      color: #2c3e50;
+      padding: 0 1.5rem;
+      margin: 1.2rem 0 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .fact-content {
+      font-size: 1rem;
+      color: #34495e;
+      line-height: 1.6;
+      padding: 0 1.5rem 1.5rem;
+    }
+    /* 收藏按钮样式 */
+    .collect-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.9);
+      border: none;
+      color: #ccc;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+    .collect-btn.active {
+      color: #e74c3c;
+      transform: scale(1.1);
+    }
+    .collect-btn:hover {
+      color: #e74c3c;
+    }
+    /* 我的收藏区块 */
+    .collect-facts-section {
+      margin-bottom: 3rem;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    }
+    .collect-header {
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #f1f5f9;
+    }
+    .collect-title {
+      font-size: 1.6rem;
+      color: #2c3e50;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 0.5rem;
+    }
+    .collect-desc {
+      font-size: 1rem;
+      color: #7f8c8d;
+      max-width: 1000px;
+    }
+    /* 无收藏提示 */
+    .no-collect {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 2rem 0;
+      color: #95a5a6;
+      font-size: 1rem;
+    }
+    .no-collect i {
+      font-size: 1.8rem;
+      margin-bottom: 0.8rem;
+      display: block;
+    }

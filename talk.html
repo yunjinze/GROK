@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>电影论坛 - 第七艺术</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* 论坛页面基础样式 */
+    .forum-page {
+      padding: 2rem 4rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .forum-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .forum-title {
+      font-size: 2rem;
+      color: #2c3e50;
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .forum-desc {
+      font-size: 1.1rem;
+      color: #7f8c8d;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* 发言提交表单 */
+    .comment-form {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-bottom: 3rem;
+    }
+    .form-title {
+      font-size: 1.3rem;
+      color: #2c3e50;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+    .form-label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #495057;
+      font-weight: 500;
+    }
+    .form-input, .form-textarea {
+      width: 100%;
+      padding: 0.9rem;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      font-size: 1rem;
+      color: #34495e;
+      font-family: inherit;
+    }
+    .form-textarea {
+      min-height: 120px;
+      resize: vertical;
+      line-height: 1.6;
+    }
+    .submit-btn {
+      background: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 0.9rem 2rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .submit-btn:hover {
+      background: #2980b9;
+    }
+
+    /* 评论列表样式 */
+    .comments-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+    .comment-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+      position: relative;
+    }
+    .comment-card:hover {
+      transform: translateY(-5px);
+    }
+    .comment-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .user-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #3498db;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .user-info {
+      flex: 1;
+    }
+    .user-name {
+      font-size: 1.1rem;
+      color: #2c3e50;
+      font-weight: 500;
+    }
+    .comment-time {
+      font-size: 0.8rem;
+      color: #95a5a6;
+    }
+    .comment-content {
+      font-size: 1rem;
+      color: #34495e;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .comment-movie {
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      background: #f1f5f9;
+      color: #3498db;
+      border-radius: 20px;
+      font-size: 0.85rem;
+    }
+    .delete-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      color: #e74c3c;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+    }
+    .delete-btn:hover {
+      opacity: 1;
+    }
+
+    /* 无评论提示 */
+    .no-comments {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 3rem 0;
+      color: #95a5a6;
+      font-size: 1.1rem;
+    }
+    .no-comments i {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">第七<span>艺术</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="ClassMovies.html">经典电影</a></li>
+        <li><a href="knowledge.html">冷知识</a></li>
+        <li><a href="history.html">电影历史</a></li>
+        <li><a href="quotes.html">经典台词</a></li>
+        <li><a href="talk.html" class="active">论坛</a></li>
+        <li><a href="about.html">关于</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 页面内容 -->
+  <main class="forum-page">
+    <section class="forum-header">
+      <h2 class="forum-title"><i class="fas fa-comments"></i> 电影论坛 - 影迷心声</h2>
+      <p class="forum-desc">分享你对电影的真实看法，在这里遇见志同道合的影迷，碰撞思想的火花</p>
+    </section>
+
+    <!-- 发言提交表单 -->
+    <section class="comment-form">
+      <h3 class="form-title"><i class="fas fa-pen-fancy"></i> 发表你的看法</h3>
+      <form id="commentForm">
+        <div class="form-group">
+          <label for="userName" class="form-label">你的昵称</label>
+          <input type="text" id="userName" class="form-input" placeholder="请输入你的昵称" required>
+        </div>
+        <div class="form-group">
+          <label for="movieName" class="form-label">电影名称</label>
+          <input type="text" id="movieName" class="form-input" placeholder="你想评论的电影名称" required>
+        </div>
+        <div class="form-group">
+          <label for="commentContent" class="form-label">评论内容</label>
+          <textarea id="commentContent" class="form-textarea" placeholder="分享你的观影感受、剧情分析或经典台词..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> 提交发言</button>
+      </form>
+    </section>
+
+    <!-- 评论展示区域 -->
+    <section class="comments-container" id="commentsList">
+      <!-- 无评论提示 -->
+      <div class="no-comments">
+        <i class="fas fa-comment-slash"></i>
+        <p>暂无发言，快来分享你的观影感受吧～</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // 核心：使用localStorage保存发言，刷新不丢失
+    const COMMENT_KEY = 'movieForumComments';
+
+    // DOM元素
+    const commentForm = document.getElementById('commentForm');
+    const commentsList = document.getElementById('commentsList');
+    const userNameInput = document.getElementById('userName');
+    const movieNameInput = document.getElementById('movieName');
+    const commentContentInput = document.getElementById('commentContent');
+
+    // 页面加载时，自动渲染已保存的发言
+    window.addEventListener('load', renderComments);
+
+    // 提交表单事件
+    commentForm.addEventListener('submit', function(e) {
+      e.preventDefault(); // 阻止表单默认提交
+
+      // 获取输入值（去空格）
+      const userName = userNameInput.value.trim();
+      const movieName = movieNameInput.value.trim();
+      const commentContent = commentContentInput.value.trim();
+
+      // 验证输入
+      if (!userName || !movieName || !commentContent) {
+        alert('昵称、电影名称和评论内容不能为空～');
+        return;
+      }
+
+      // 创建发言对象
+      const comment = {
+        id: Date.now(), // 用时间戳作为唯一ID（方便删除）
+        userName,
+        movieName,
+        commentContent,
+        time: formatTime(new Date()) // 格式化时间
+      };
+
+      // 保存到localStorage
+      saveComment(comment);
+
+      // 渲染最新发言
+      renderComments();
+
+      // 清空表单
+      commentForm.reset();
+
+      // 提示提交成功
+      alert('发言提交成功！');
+    });
+
+    // 保存发言到localStorage
+    function saveComment(comment) {
+      // 先获取已保存的发言（没有则为空数组）
+      const savedComments = JSON.parse(localStorage.getItem(COMMENT_KEY)) || [];
+      // 添加新发言到数组开头（最新的在前面）
+      savedComments.unshift(comment);
+      // 重新保存到localStorage
+      localStorage.setItem(COMMENT_KEY, JSON.stringify(savedComments));
+    }
+
+    // 渲染所有发言
+    function renderComments() {
+      const savedComments = JSON.parse(localStorage.getItem(COMMENT_KEY)) || [];
+
+      // 清空评论区
+      commentsList.innerHTML = '';
+
+      // 无发言时显示提示
+      if (savedComments.length === 0) {
+        commentsList.innerHTML = `
+          <div class="no-comments">
+            <i class="fas fa-comment-slash"></i>
+            <p>暂无发言，快来分享你的观影感受吧～</p>
+          </div>
+        `;
+        return;
+      }
+
+      // 渲染每条发言
+      savedComments.forEach(comment => {
+        const commentCard = document.createElement('div');
+        commentCard.className = 'comment-card';
+        
+        // 生成随机头像颜色（基于昵称哈希，保持同一昵称颜色一致）
+        const colorHash = comment.userName.split('').reduce((sum, char) => char.charCodeAt(0) + sum, 0);
+        const colors = ['#3498db', '#e74c3c', '#2ecc71', '#f39c12', '#9b59b6', '#1abc9c'];
+        const avatarColor = colors[colorHash % colors.length];
+        // 头像显示昵称首字
+        const avatarText = comment.userName.charAt(0).toUpperCase();
+
+        // 发言卡片内容
+        commentCard.innerHTML = `
+          <button class="delete-btn" data-id="${comment.id}"><i class="fas fa-trash"></i></button>
+          <div class="comment-header">
+            <div class="user-avatar" style="background: ${avatarColor}">${avatarText}</div>
+            <div class="user-info">
+              <div class="user-name">${comment.userName}</div>
+              <div class="comment-time">${comment.time}</div>
+            </div>
+          </div>
+          <div class="comment-content">${comment.commentContent}</div>
+          <span class="comment-movie">${comment.movieName}</span>
+        `;
+
+        // 添加到评论区
+        commentsList.appendChild(commentCard);
+      });
+
+      // 给所有删除按钮绑定事件
+      bindDeleteEvents();
+    }
+
+    // 绑定删除按钮事件
+    function bindDeleteEvents() {
+      const deleteBtns = document.querySelectorAll('.delete-btn');
+      deleteBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const commentId = parseInt(this.getAttribute('data-id'));
+          // 确认删除
+          if (confirm('确定要删除这条发言吗？')) {
+            deleteComment(commentId);
+            renderComments(); // 重新渲染
+          }
+        });
+      });
+    }
+
+    // 删除指定ID的发言
+    function deleteComment(commentId) {
+      let savedComments = JSON.parse(localStorage.getItem(COMMENT_KEY)) || [];
+      // 过滤掉要删除的发言（保留ID不等于commentId的）
+      savedComments = savedComments.filter(comment => comment.id !== commentId);
+      // 重新保存
+      localStorage.setItem(COMMENT_KEY, JSON.stringify(savedComments));
+    }
+
+    // 格式化时间（例：2024-05-20 14:30:25）
+    function formatTime(date) {
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const day = String(date.getDate()).padStart(2, '0');
+      const hour = String(date.getHours()).padStart(2, '0');
+      const minute = String(date.getMinutes()).padStart(2, '0');
+      const second = String(date.getSeconds()).padStart(2, '0');
+      return `${year}-${month}-${day} ${hour}:${minute}:${second}`;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第七艺术 - 泰坦尼克号</title>
+  <link rel="stylesheet" href="/CSS/style.css">
+  <link rel="stylesheet" href="/CSS/经典-肖申克的救赎.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* 全局样式与模板一致，此处省略 */
+  </style>
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">第七<span>艺术</span></a>
+      <ul class="nav-links">
+        <li><a href="\index.html">首页</a></li>
+        <li><a href="\ClassMovies.html" class="active">经典电影</a></li>
+        <li><a href="\knowledge.html">冷知识</a></li>
+        <li><a href="\history.html">电影历史</a></li>
+        <li><a href="\quotes.html">经典台词</a></li>
+        <li><a href="\talk.html">论坛</a></li>
+        <li><a href="\about.html">关于</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 主内容区 -->
+  <div class="main-wrapper">
+    <!-- 电影头部横幅 -->
+    <section class="movie-banner">
+      <div class="banner-poster">
+        <img src="/图片/泰坦尼克号海报.jpg" alt="泰坦尼克号海报" class="poster-img">
+        <div class="poster-overlay">
+          <div class="rating-badge">
+            <i class="fas fa-star"></i> 9.5 / 10
+          </div>
+          <p>影史爱情灾难史诗</p>
+        </div>
+      </div>
+      <div class="banner-content">
+        <h1 class="movie-title">泰坦尼克号 <span class="original-title">(Titanic)</span></h1>
+        <div class="movie-meta">
+          <div class="meta-item">
+            <i class="fas fa-calendar-alt"></i> 1997年
+          </div>
+          <div class="meta-item">
+            <i class="fas fa-user"></i> 詹姆斯·卡梅隆
+          </div>
+          <div class="meta-item">
+            <i class="fas fa-tag"></i> 爱情 / 灾难
+          </div>
+          <div class="meta-item">
+            <i class="fas fa-clock"></i> 194分钟
+          </div>
+          <div class="meta-item">
+            <i class="fas fa-globe"></i> 美国 / 墨西哥 / 澳大利亚
+          </div>
+        </div>
+        <p class="movie-tagline">我心永恒，跨越生死的爱恋。</p>
+        <div class="action-buttons">
+          <button class="btn btn-primary">
+            <i class="fas fa-play"></i> 立即观看
+          </button>
+          <button class="btn btn-secondary">
+            <i class="fas fa-plus"></i> 收藏影片
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 内容网格区 -->
+    <div class="content-grid">
+      <!-- 左侧主内容 -->
+      <div class="main-content">
+        <!-- 电影解说 -->
+        <section class="movie-commentary">
+          <div class="section-header">
+            <div class="section-icon">
+              <i class="fas fa-comment-dots"></i>
+            </div>
+            <h2 class="section-title">电影解说</h2>
+          </div>
+          <div class="commentary-tabs">
+            <button class="tab-btn active" data-tab="plot">剧情简介</button>
+            <button class="tab-btn" data-tab="theme">主题解析</button>
+            <button class="tab-btn" data-tab="analysis">深层解读</button>
+          </div>
+          <div class="tab-content active" id="plot">
+            <p class="commentary-paragraph">1912年，被誉为"永不沉没"的豪华邮轮泰坦尼克号从英国南安普顿起航，前往美国纽约。贵族少女露丝与母亲和未婚夫卡尔一同登上邮轮，她厌倦了上流社会的虚伪与束缚，一心想要逃离。在绝望之际，露丝遇到了穷画家杰克，杰克的自由奔放、乐观开朗深深吸引了她。</p>
+            <p class="commentary-paragraph">两人不顾阶级差异，迅速坠入爱河，在泰坦尼克号上留下了许多浪漫的回忆。然而，在邮轮航行的第四天夜晚，泰坦尼克号与冰山相撞，船体受损严重，即将沉没。在生死关头，杰克为了保护露丝，将她推上一块漂浮的门板，自己则浸泡在冰冷的海水中，最终冻僵牺牲。露丝听从杰克的嘱托，坚强地活了下来，用一生践行着对杰克的承诺。84年后，老年露丝将珍藏的"海洋之心"项链投入大海，让它陪伴杰克长眠海底。</p>
+          </div>
+          <div class="tab-content" id="theme">
+            <h3 class="commentary-subtitle">爱情与自由的颂歌</h3>
+            <p class="commentary-paragraph">影片以真实的泰坦尼克号海难为背景，讲述了一段跨越阶级、跨越生死的爱情故事。杰克与露丝的爱情，是对自由与真爱的歌颂——露丝在杰克的影响下，摆脱了阶级的束缚，找到了真正的自我；杰克则用生命诠释了爱情的真谛：为了所爱之人，可以牺牲一切。</p>
+            <h3 class="commentary-subtitle">人性的光辉与黑暗</h3>
+            <p class="commentary-paragraph">影片也展现了人性的复杂：在灾难面前，有人自私自利，为了逃生不择手段；有人则坚守道义，选择与邮轮共存亡。泰坦尼克号的沉没不仅是一场悲剧，也是对人类傲慢的警示——人类自以为可以征服自然，却最终被自然无情惩罚。而杰克与露丝的爱情，在这场灾难中闪耀着人性的光辉，成为永恒的经典。</p>
+          </div>
+          <div class="tab-content" id="analysis">
+            <h3 class="commentary-subtitle">历史与虚构的交织</h3>
+            <p class="commentary-paragraph">影片在真实历史事件的基础上，巧妙地融入了虚构的爱情故事。卡梅隆对泰坦尼克号的还原达到了极致：从邮轮的内部装饰、餐具摆放，到乘客的服装、言行，都经过严格考证。这种历史的真实性与爱情故事的浪漫性相结合，让影片既有史诗感，又充满情感张力。</p>
+            <h3 class="commentary-subtitle">女性意识的觉醒</h3>
+            <p class="commentary-paragraph">露丝的角色是女性意识觉醒的象征。她从一个逆来顺受的贵族少女，逐渐成长为敢于反抗、追求自由的独立女性。她拒绝嫁给卡尔，选择与杰克在一起；在沉船时，她勇敢地返回船舱救杰克；最终，她用杰克的姓氏生活，实现了自我价值。这种女性的成长弧光，让影片在爱情故事之外，具有了更深层次的社会意义。</p>
+          </div>
+        </section>
+
+        <!-- 幕后故事 -->
+        <section class="movie-behind">
+          <div class="section-header">
+            <div class="section-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h2 class="section-title">幕后故事</h2>
+          </div>
+          <div class="behind-grid">
+            <div class="behind-card">
+              <h3 class="behind-title">
+                <i class="fas fa-building"></i> 1:1复刻的泰坦尼克号
+              </h3>
+              <p class="behind-text">导演詹姆斯·卡梅隆为了还原泰坦尼克号的真实面貌，在墨西哥下加利福尼亚州的罗萨里托海滩，按1:1比例复刻了邮轮的前半部分，耗资达2亿美元，成为当时制作成本最高的电影。复刻的邮轮长237米，高34米，内部装饰完全参照历史资料，包括豪华餐厅、楼梯、客房等，甚至餐具、地毯都与原版一致。</p>
+            </div>
+            <div class="behind-card">
+              <h3 class="behind-title">
+                <i class="fas fa-icicles"></i> 冰冷海水的真实拍摄
+              </h3>
+              <p class="behind-text">沉船场景的海水是真实的冷水，剧组将巨型水箱中的水冷却至4℃，莱昂纳多·迪卡普里奥和凯特·温斯莱特在其中浸泡了数小时。凯特因长时间低温拍摄患上肺炎，莱昂纳多则多次冻到嘴唇发紫，却坚持不用替身。卡梅隆说："只有真实的寒冷，才能拍出绝境中的绝望，让观众感受到角色的痛苦。"</p>
+            </div>
+            <div class="behind-card">
+              <h3 class="behind-title">
+                <i class="fas fa-music"></i> 《我心永恒》的创作历程
+              </h3>
+              <p class="behind-text">影片主题曲《我心永恒》由席琳·迪翁演唱，作曲家詹姆斯·霍纳在看完影片初剪后，仅用一天时间就完成了旋律创作。席琳·迪翁最初并不想演唱这首歌曲，因为她刚生完孩子，希望专注于家庭，但在丈夫的劝说下，她还是录制了 demo。卡梅隆听完后深受感动，当即决定将其作为影片主题曲。这首歌后来获得奥斯卡最佳原创歌曲奖，成为全球最畅销的电影主题曲之一。</p>
+            </div>
+            <div class="behind-card">
+              <h3 class="behind-title">
+                <i class="fas fa-trophy"></i> 票房与口碑的双丰收
+              </h3>
+              <p class="behind-text">《泰坦尼克号》上映后，全球票房达21.87亿美元，成为当时全球票房最高的电影，这一纪录保持了12年，直到2009年被卡梅隆的另一部作品《阿凡达》打破。影片在第70届奥斯卡金像奖中获得14项提名，最终斩获11项大奖，与《指环王：王者归来》《宾虚》并列奥斯卡获奖最多的电影。2012年，影片以3D形式重映，再次引发观影热潮，全球票房累计突破23亿美元。</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 右侧侧边栏 -->
+      <div class="sidebar">
+        <!-- 基本信息卡片 -->
+        <div class="sidebar-card">
+          <h3 class="sidebar-title">
+            <i class="fas fa-info-circle"></i> 基本信息
+          </h3>
+          <ul class="info-list">
+            <li class="info-item">
+              <span class="info-label">导演</span>
+              <span class="info-value">詹姆斯·卡梅隆</span>
+            </li>
+            <li class="info-item">
+              <span class="info-label">编剧</span>
+              <span class="info-value">詹姆斯·卡梅隆</span>
+            </li>
+            <li class="info-item">
+              <span class="info-label">主演</span>
+              <span class="info-value">莱昂纳多·迪卡普里奥 / 凯特·温斯莱特</span>
+            </li>
+            <li class="info-item">
+              <span class="info-label">上映日期</span>
+              <span class="info-value">1997-12-19(美国)</span>
+            </li>
+            <li class="info-item">
+              <span class="info-label">片长</span>
+              <span class="info-value">194分钟</span>
+            </li>
+            <li class="info-item">
+              <span class="info-label">IMDb</span>
+              <span class="info-value">7.9 / 10</span>
+            </li>
+            <li class="info-item">
+              <span class="info-label">豆瓣评分</span>
+              <span class="info-value">9.5 / 10</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 主要演员卡片 -->
+        <div class="sidebar-card">
+          <h3 class="sidebar-title">
+            <i class="fas fa-user-friends"></i> 主要演员
+          </h3>
+          <ul class="cast-list">
+            <li class="cast-item">
+              <img src="/图片/莱昂纳多迪卡普里奥.jpg" alt="莱昂纳多·迪卡普里奥" class="cast-avatar">
+              <div class="cast-info">
+                <div class="cast-name">莱昂纳多·迪卡普里奥</div>
+                <div class="cast-role">饰 杰克·道森</div>
+              </div>
+            </li>
+            <li class="cast-item">
+              <img src="/图片/凯特·温斯莱特.jpg" alt="凯特·温斯莱特" class="cast-avatar">
+              <div class="cast-info">
+                <div class="cast-name">凯特·温斯莱特</div>
+                <div class="cast-role">饰 露丝·德威特·布克特</div>
+              </div>
+            </li>
+            <li class="cast-item">
+              <img src="/图片/比利·赞恩.jpg" alt="比利·赞恩" class="cast-avatar">
+              <div class="cast-info">
+                <div class="cast-name">比利·赞恩</div>
+                <div class="cast-role">饰 卡尔·霍克利</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 经典台词卡片 -->
+        <div class="sidebar-card">
+          <h3 class="sidebar-title">
+            <i class="fas fa-quote-left"></i> 经典台词
+          </h3>
+          <div style="padding: 0.5rem 0;">
+            <p style="font-style: italic; color: #444; margin-bottom: 1rem; line-height: 1.6;">
+              "You jump, I jump."
+            </p>
+            <p style="color: #666; margin-bottom: 1.5rem;">
+              "你跳，我就跳。"
+            </p>
+            <p style="font-style: italic; color: #444; margin-bottom: 1rem; line-height: 1.6;">
+              "I'll never let go, Jack. I'll never let go."
+            </p>
+            <p style="color: #666; line-height: 1.6;">
+              "我不会放弃的，杰克。我永远不会放弃。"
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/JS/movie-common.js"></script>
+</body>
+</html>

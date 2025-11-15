@@ -1,0 +1,521 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', 'Noto Sans SC', sans-serif;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* 导航栏保持原有样式，确保一致性 */
+    nav {
+      background-color: #1a1a1a;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+    }
+
+    .logo {
+      color: #fff;
+      font-size: 1.8rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: #e50914;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+      padding: 0.5rem 0;
+      position: relative;
+    }
+
+    .nav-links a.active {
+      color: #e50914;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #e50914;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    /* 主容器样式 */
+    .main-wrapper {
+      max-width: 1400px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+
+    /* 电影头部横幅 */
+    .movie-banner {
+      background: linear-gradient(135deg, #1c1c1c 0%, #333 100%);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      margin-bottom: 3rem;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      color: #fff;
+    }
+
+    .banner-poster {
+      position: relative;
+    }
+
+    .banner-poster img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .poster-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.5rem;
+      background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    }
+
+    .rating-badge {
+      display: inline-flex;
+      align-items: center;
+      background-color: #e50914;
+      color: #fff;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .rating-badge i {
+      margin-right: 0.3rem;
+    }
+
+    .banner-content {
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .movie-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+
+    .original-title {
+      font-size: 1.2rem;
+      color: #ccc;
+      font-weight: 400;
+    }
+
+    .movie-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+      color: #eee;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .movie-tagline {
+      font-size: 1.1rem;
+      font-style: italic;
+      color: #ddd;
+      border-left: 3px solid #e50914;
+      padding-left: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .action-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .btn {
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .btn-primary {
+      background-color: #e50914;
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background-color: rgba(255,255,255,0.1);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    /* 内容区布局 */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    /* 电影解说区 */
+    .movie-commentary {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 2px solid #f0f0f0;
+    }
+
+    .section-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #fef0f0;
+      color: #e50914;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #222;
+    }
+
+    .commentary-tabs {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 0.5rem;
+    }
+
+    .tab-btn {
+      background: none;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #666;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .tab-btn.active {
+      color: #e50914;
+    }
+
+    .tab-btn.active::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: #e50914;
+      border-radius: 3px;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .commentary-paragraph {
+      margin-bottom: 1.2rem;
+      color: #444;
+      line-height: 1.8;
+    }
+
+    .commentary-subtitle {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 1.8rem 0 1rem;
+      color: #222;
+    }
+
+    /* 侧边栏 */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .sidebar-card {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    }
+
+    .sidebar-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #222;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .sidebar-title i {
+      color: #e50914;
+    }
+
+    .info-list {
+      list-style: none;
+    }
+
+    .info-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .info-item:last-child {
+      border-bottom: none;
+    }
+
+    .info-label {
+      color: #666;
+      font-weight: 500;
+    }
+
+    .info-value {
+      color: #333;
+      text-align: right;
+    }
+
+    .cast-list {
+      list-style: none;
+    }
+
+    .cast-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .cast-item:last-child {
+      border-bottom: none;
+    }
+
+    .cast-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      background-color: #f0f0f0;
+    }
+
+    .cast-info {
+      flex: 1;
+    }
+
+    .cast-name {
+      font-weight: 600;
+      color: #222;
+      font-size: 0.95rem;
+    }
+
+    .cast-role {
+      color: #666;
+      font-size: 0.85rem;
+    }
+
+    /* 幕后故事区 */
+    .movie-behind {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    }
+
+    .behind-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .behind-card {
+      border-radius: 8px;
+      padding: 1.2rem;
+      background-color: #f9f9f9;
+      border-left: 3px solid #e50914;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .behind-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .behind-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      color: #222;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .behind-title i {
+      color: #e50914;
+      font-size: 0.9rem;
+    }
+
+    .behind-text {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* 响应式设计 */
+    @media (max-width: 1200px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .movie-banner {
+        grid-template-columns: 1fr;
+      }
+
+      .banner-poster {
+        height: 400px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-container {
+        padding: 0 1rem;
+      }
+
+      .nav-links {
+        gap: 1rem;
+      }
+
+      .movie-title {
+        font-size: 2rem;
+      }
+
+      .movie-meta {
+        gap: 1rem;
+      }
+
+      .action-buttons {
+        flex-direction: column;
+      }
+
+      .behind-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .main-wrapper {
+        padding: 0 1rem;
+      }
+
+      .movie-commentary,
+      .movie-behind {
+        padding: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 1.5rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .banner-poster {
+        height: 300px;
+      }
+
+      .movie-title {
+        font-size: 1.8rem;
+      }
+
+      .section-title {
+        font-size: 1.3rem;
+      }
+    }

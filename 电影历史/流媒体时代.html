@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第七艺术 - 流媒体时代</title>
+  <link rel="stylesheet" href="/CSS/style.css">
+  <!-- 复用统一CSS文件 -->
+  <link rel="stylesheet" href="/CSS/无声电影时代.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- 导航栏 -->
+   <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">第七<span>艺术</span></a>
+      <ul class="nav-links">
+        <li><a href="\index.html">首页</a></li>
+        <li><a href="\ClassMovies.html">经典电影</a></li>
+        <li><a href="\knowledge.html">冷知识</a></li>
+        <li><a href="\history.html" class="active">电影历史</a></li>
+        <li><a href="\quotes.html">经典台词</a></li>
+        <li><a href="\talk.html">论坛</a></li>
+        <li><a href="\about.html">关于</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 主内容区（复用类名确保样式统一） -->
+  <main class="silent-film-main">
+    <!-- 头部横幅 -->
+    <section class="silent-film-banner">
+      <div class="banner-overlay">
+        <h1>流媒体时代</h1>
+        <p>2000年代末 - 至今 | 屏幕无界，内容重构电影生态</p>
+        <a href="#content" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+      </div>
+    </section>
+
+    <!-- 核心内容区 -->
+    <div id="content" class="silent-film-content">
+      <!-- 时代概述 -->
+      <section class="silent-film-section overview-section">
+        <h2 class="section-title"><i class="fas fa-history"></i> 时代概述</h2>
+        <div class="section-content">
+          <p>流媒体时代（Streaming Era）是数字技术与互联网融合催生的电影产业新形态，以Netflix、Disney+、HBO Max等平台为核心，通过互联网实时传输替代物理媒介与传统院线发行，彻底重构了电影的制作、发行、消费与价值评估体系。这一变革始于2007年Netflix推出在线流媒体服务，2013年《纸牌屋》标志自制内容崛起，2020年疫情加速“院网协同”模式普及，推动电影进入“多屏时代”。</p>
+          <p>流媒体的核心是“内容即服务”：用户通过订阅制随时随地获取海量内容，打破了时间与空间的限制；平台通过大数据分析精准匹配内容与受众，推动创作从“赌爆款”转向“分众化”；而“自制内容+全球发行”模式，让小语种电影、独立作品获得全球曝光，同时催生了《罗马》《爱尔兰人》等兼具艺术价值与商业影响力的“流媒体大片”，重新定义了电影的边界与可能性。</p>
+        </div>
+      </section>
+
+      <!-- 核心模块（标签切换，复用JS交互） -->
+      <section class="silent-film-section core-section">
+        <div class="tab-buttons">
+          <button class="tab-btn active" data-tab="figures">平台与革新者</button>
+          <button class="tab-btn" data-tab="films">标志性作品</button>
+          <button class="tab-btn" data-tab="technology">产业重构</button>
+        </div>
+
+        <!-- 平台与革新者 -->
+        <div class="tab-content active" id="figures">
+          <div class="figures-grid">
+            <div class="figure-card">
+              <img src="/图片/Netflix.jpg" alt="Netflix">
+              <h3>Netflix（网飞）</h3>
+              <p class="role">流媒体开拓者 | 1997年成立</p>
+              <p class="intro">从DVD租赁转型流媒体，2007年开启在线点播服务，2013年《纸牌屋》验证“数据驱动创作”模式，2018年《罗马》获奥斯卡最佳外语片，打破流媒体与“艺术电影”的边界。全球订阅用户超2.3亿，推动行业从“窗口期发行”转向“即时触达”。</p>
+            </div>
+            <div class="figure-card">
+              <img src="/图片/里德哈斯廷斯.jpg" alt="里德·哈斯廷斯">
+              <h3>里德·哈斯廷斯</h3>
+              <p class="role">Netflix联合创始人 | 1960-</p>
+              <p class="intro">提出“订阅制+无广告”模式，推动Netflix从内容分发平台转型为原创内容巨头。他坚持“自由与责任”的企业文化，允许创作者拥有高度创作自由，同时通过算法精准预测用户偏好，是流媒体商业模式的核心设计者。</p>
+            </div>
+            <div class="figure-card">
+              <img src="/图片/Disney+.jpg" alt="Disney+">
+              <p class="role">IP宇宙放大器 | 2019年上线</p>
+              <p class="intro">迪士尼旗下流媒体平台，依托漫威、星战、皮克斯等超级IP，上线首日订阅量破1000万。通过《曼达洛人》《旺达幻视》等“电影级剧集”与院线电影“同步上线”策略，构建了“IP跨媒介叙事”生态，重新定义了内容价值。</p>
+            </div>
+            <div class="figure-card">
+              <img src="/图片/奉俊昊.jpg" alt="奉俊昊">
+              <p class="role">跨媒介叙事先锋 | 1969-</p>
+              <p class="intro">导演《寄生虫》通过流媒体全球传播，成为首部获奥斯卡最佳影片的非英语电影；后续与Netflix合作《雪国列车》剧集，探索“电影-剧集”联动模式。他推动流媒体成为全球文化交流的桥梁，证明优质内容可突破语言与文化壁垒。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 标志性作品 -->
+        <div class="tab-content" id="films">
+          <div class="films-grid">
+            <div class="film-card">
+              <img src="/图片/罗马.jpg" alt="罗马">
+              <h3>罗马 (Roma)</h3>
+              <p class="year">2018 | 墨西哥/美国 | 阿方索·卡隆 导演</p>
+              <p class="intro">Netflix出品的黑白自传体电影，聚焦墨西哥城女佣的生活。获奥斯卡最佳导演、最佳外语片等3项大奖，是首部获重要奥斯卡奖项的流媒体电影，打破了“流媒体=低俗娱乐”的偏见，确立其艺术价值。</p>
+            </div>
+            <div class="film-card">
+              <img src="/图片/爱尔兰人.jpg" alt="爱尔兰人">
+              <h3>爱尔兰人 (The Irishman)</h3>
+              <p class="year">2019 | 美国 | 马丁·斯科塞斯 导演</p>
+              <p class="intro">Netflix斥资1.59亿美元制作的黑帮史诗，罗伯特·德尼罗、阿尔·帕西诺主演。通过数字减龄技术让演员饰演不同年龄段，获10项奥斯卡提名。影片证明流媒体可支撑高成本艺术电影，为资深导演提供创作自由。</p>
+            </div>
+            <div class="film-card">
+              <img src="/图片/曼达洛人.jpg" alt="曼达洛人">
+              <h3>曼达洛人 (The Mandalorian)</h3>
+              <p class="year">2019- | 美国 | 乔恩·费儒 等导演</p>
+              <p class="intro">Disney+的旗舰剧集（电影级制作），开创“虚拟制作”技术（StageCraft），每集成本超1500万美元。“尤达宝宝”成为全球现象级IP，证明流媒体可通过“剧集+电影”联动构建IP宇宙，模糊了电影与剧集的界限。</p>
+            </div>
+            <div class="film-card">
+              <img src="/图片/后翼弃兵.jpg" alt="后翼弃兵">
+              <h3>后翼弃兵 (The Queen's Gambit)</h3>
+              <p class="year">2020 | 美国 | 斯科特·弗兰克 导演</p>
+              <p class="intro">Netflix出品的迷你剧（按电影叙事结构创作），讲述女棋手的成长历程。全球观看用户超6200万，带动国际象棋销量暴涨，证明流媒体可通过优质内容创造文化现象，且“短剧电影化”成为新趋势。</p>
+            </div>
+            <div class="film-card">
+              <img src="/图片/婚姻故事.jpg" alt="婚姻故事">
+              <h3>婚姻故事 (Marriage Story)</h3>
+              <p class="year">2019 | 美国 | 诺亚·鲍姆巴赫 导演</p>
+              <p class="intro">Netflix出品的情感剧情片，亚当·德赖弗与斯嘉丽·约翰逊主演，获6项奥斯卡提名。影片聚焦婚姻与家庭，用细腻叙事证明流媒体不仅能做大片，也能承载深刻的人文关怀，是“流媒体文艺片”的代表。</p>
+            </div>
+            <div class="film-card">
+              <img src="/图片/哥斯拉大战金刚.jpg" alt="哥斯拉大战金刚">
+              <h3>哥斯拉大战金刚 (Godzilla vs. Kong)</h3>
+              <p class="year">2021 | 美国 | 亚当·温加德 导演</p>
+              <p class="intro">华纳兄弟与HBO Max“院网同步”发行的标杆，上映当天同步登陆流媒体，全球票房超4.68亿美元，流媒体观看量创纪录。证明“双轨发行”可兼顾院线与线上收益，成为疫情后行业的重要模式。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 产业重构 -->
+        <div class="tab-content" id="technology">
+          <div class="tech-grid">
+            <div class="tech-card">
+              <h3><i class="fas fa-film"></i> 发行模式颠覆</h3>
+              <ul>
+                <li>窗口期瓦解：传统“院线-影碟-付费点播-免费”的窗口期被打破，“院网同步”“独家上线”成为常态。</li>
+                <li>全球即时触达：一部电影可在190个国家同时上线，消除地域发行壁垒（如《罗马》全球同步观看）。</li>
+                <li>数据驱动排播：通过用户画像精准推荐，取代传统“档期竞争”模式，小众内容也能找到受众。</li>
+              </ul>
+            </div>
+            <div class="tech-card">
+              <h3><i class="fas fa-pencil-alt"></i> 创作生态变革</h3>
+              <ul>
+                <li>创作自由提升：平台较少干预创作（如Netflix给导演最终剪辑权），文艺片、实验性作品获得更多机会。</li>
+                <li>类型边界模糊：“电影级剧集”“短剧电影”兴起，叙事长度不再受院线时长限制（如《爱尔兰人》3.5小时）。</li>
+                <li>全球合作深化：跨国合拍常态化（如《鱿鱼游戏》韩美合作），文化元素融合更深入。</li>
+              </ul>
+            </div>
+            <div class="tech-card">
+              <h3><i class="fas fa-users"></i> 受众与消费变革</h3>
+              <ul>
+                <li>观看场景多元：从影院到大屏电视、平板、手机，“碎片化观影”与“沉浸式观影”并存。</li>
+                <li>互动性增强：弹幕、二次创作、实时讨论成为观影一部分，观众从“被动接受”变为“主动参与”。</li>
+                <li>订阅制普及：“月费30元看百部电影”替代单次购票，内容消费从“按次付费”转向“按需订阅”。</li>
+              </ul>
+            </div>
+            <div class="tech-card">
+              <h3><i class="fas fa-balance-scale"></i> 行业权力转移</h3>
+              <ul>
+                <li>平台崛起：Netflix、Disney+等平台市值超越传统制片厂，掌握内容分发话语权。</li>
+                <li>院线转型：传统影院从“发行主渠道”变为“体验场所”，IMAX、4D等沉浸式放映成核心竞争力。</li>
+                <li>工会博弈：流媒体 residuals（ residuals指版税分成）、窗口期等问题引发编剧/演员工会谈判，推动行业规则重塑。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 历史意义 -->
+      <section class="silent-film-section significance-section">
+        <h2 class="section-title"><i class="fas fa-monument"></i> 历史意义</h2>
+        <div class="section-content">
+          <div class="significance-grid">
+            <div class="significance-item">
+              <h3><i class="fas fa-globe"></i> 电影的全球化与民主化</h3>
+              <p>流媒体打破了地域与语言的壁垒，让小语种电影、第三世界电影获得全球观众，同时降低了创作与观看门槛，推动电影从“精英艺术”向“全民参与”的文化形态转变。</p>
+            </div>
+            <div class="significance-item">
+              <h3><i class="fas fa-random"></i> 内容价值的重新定义</h3>
+              <p>从“票房为王”转向“用户时长、口碑、文化影响力”的多元评估体系，文艺片、纪录片等非商业类型获得生存空间，内容生态更趋多元化。</p>
+            </div>
+            <div class="significance-item">
+              <h3><i class="fas fa-tv"></i> 媒介边界的消融</h3>
+              <p>电影、剧集、短视频的界限逐渐模糊，形成“跨媒介叙事”生态，内容消费进入“场景适配”时代，电影不再局限于“90-120分钟的银幕体验”。</p>
+            </div>
+            <div class="significance-item">
+              <h3><i class="fas fa-question-circle"></i> 行业规则的重构契机</h3>
+              <p>流媒体引发的发行模式、收益分配、版权保护等争议，推动电影行业建立更适应数字时代的规则，为未来电影生态的可持续发展奠定基础。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- 返回顶部按钮 -->
+  <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+
+  <!-- 复用统一JS文件 -->
+  <script src="/JS/silent-film.js"></script>
+</body>
+</html>

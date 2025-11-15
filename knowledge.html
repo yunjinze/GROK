@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>电影冷知识 - 第七艺术</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/knowledge.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* 基础样式补充，保持与经典电影页风格统一 */
+    
+  </style>
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">第七<span>艺术</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="ClassMovies.html" >经典电影</a></li>
+        <li><a href="knowledge.html" class="active">冷知识</a></li>
+        <li><a href="history.html">电影历史</a></li>
+        <li><a href="quotes.html">经典台词</a></li>
+        <li><a href="talk.html">论坛</a></li>
+        <li><a href="about.html">关于</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 页面内容 -->
+  <main class="cold-facts-page">
+    <section class="section-header">
+      <h2 class="section-title"><i class="fas fa-lightbulb"></i> 电影冷知识卡片</h2>
+      <p class="section-desc">这些藏在镜头后的秘密，你知道几个？点击图片探索更多细节，收藏喜欢的冷知识～</p>
+    </section>
+
+    <!-- 我的收藏（核心：保存+展现） -->
+    <section class="collect-facts-section">
+      <div class="collect-header">
+        <h2 class="collect-title"><i class="fas fa-heart"></i> 我的收藏</h2>
+        <p class="collect-desc">收藏你感兴趣的电影冷知识，随时重温这些镜头后的小秘密</p>
+      </div>
+      <div class="cold-facts-container" id="collectFactsList">
+        <!-- 无收藏提示 -->
+        <div class="no-collect">
+          <i class="fas fa-heart-broken"></i>
+          <p>暂无收藏的冷知识，点击卡片上的❤️图标添加收藏吧～</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 冷知识卡片列表 -->
+    <div class="cold-facts-container">
+      <!-- 电影卡片1：泰坦尼克号（修正对应关系） -->
+      <div class="movie-fact-card" data-id="1" data-title="泰坦尼克号" data-img="图片/泰坦尼克号.jpg" data-content="杰克其实能和露丝一起爬上门板？导演卡梅隆亲自实验后承认：'是我错了，门板能承载两个人的重量'" data-link="电影冷知识/泰坦尼克号.html">
+        <button class="collect-btn" title="收藏冷知识"><i class="fas fa-heart"></i></button>
+        <a href="电影冷知识/泰坦尼克号.html" class="fact-img-link">
+          <img src="图片/泰坦尼克号.jpg" alt="泰坦尼克号" class="fact-img">
+        </a>
+        <h3 class="fact-movie-title"><i class="fas fa-film"></i> 泰坦尼克号</h3>
+        <p class="fact-content"><i class="fas fa-angle-right"></i> 杰克其实能和露丝一起爬上门板？导演卡梅隆亲自实验后承认："是我错了，门板能承载两个人的重量"</p>
+      </div>
+
+      <!-- 电影卡片2：教父（补充完整信息） -->
+      <div class="movie-fact-card" data-id="2" data-title="教父" data-img="图片/教父.jpg" data-content="马龙·白兰度怀里的猫是片场随机捡到的流浪猫，它的呼噜声甚至盖过了部分台词录音" data-link="电影冷知识/教父.html">
+        <button class="collect-btn" title="收藏冷知识"><i class="fas fa-heart"></i></button>
+        <a href="电影冷知识/教父.html" class="fact-img-link">
+          <img src="图片/教父.jpg" alt="教父" class="fact-img"> <!-- 图片地址请自行补充 -->
+        </a>
+        <h3 class="fact-movie-title"><i class="fas fa-film"></i> 教父</h3>
+        <p class="fact-content"><i class="fas fa-angle-right"></i> 马龙·白兰度怀里的猫是片场随机捡到的流浪猫，它的呼噜声甚至盖过了部分台词录音</p>
+      </div>
+
+      <!-- 电影卡片3：黑客帝国（补充完整信息） -->
+      <div class="movie-fact-card" data-id="3" data-title="黑客帝国" data-img="图片/黑客帝国.jpg" data-content="基努·里维斯在拍摄'子弹时间'时，整整吊了6周威亚，期间因肌肉劳损多次接受理疗" data-link="电影冷知识/黑客帝国.html">
+        <button class="collect-btn" title="收藏冷知识"><i class="fas fa-heart"></i></button>
+        <a href="电影冷知识/黑客帝国.html" class="fact-img-link">
+          <img src="图片/黑客帝国.jpg" alt="黑客帝国" class="fact-img"> <!-- 图片地址请自行补充 -->
+        </a>
+        <h3 class="fact-movie-title"><i class="fas fa-film"></i> 黑客帝国</h3>
+        <p class="fact-content"><i class="fas fa-angle-right"></i> 基努·里维斯在拍摄"子弹时间"时，整整吊了6周威亚，期间因肌肉劳损多次接受理疗</p>
+      </div>
+
+      <!-- 电影卡片4：哈利·波特与魔法石（补充完整信息） -->
+      <div class="movie-fact-card" data-id="4" data-title="哈利·波特与魔法石" data-img="图片/哈利波特.jpg" data-content="丹尼尔·雷德克里夫拍哭戏时总笑场，导演最终让工作人员在他耳边吹冷风才逼出眼泪" data-link="电影冷知识/哈利波特.html">
+        <button class="collect-btn" title="收藏冷知识"><i class="fas fa-heart"></i></button>
+        <a href="电影冷知识/哈利・波特与魔法石.html" class="fact-img-link">
+          <img src="图片/哈利·波特与魔法石.jpg" alt="哈利·波特与魔法石" class="fact-img"> <!-- 图片地址请自行补充 -->
+        </a>
+        <h3 class="fact-movie-title"><i class="fas fa-film"></i> 哈利·波特与魔法石</h3>
+        <p class="fact-content"><i class="fas fa-angle-right"></i> 丹尼尔·雷德克里夫拍哭戏时总笑场，导演最终让工作人员在他耳边吹冷风才逼出眼泪</p>
+      </div>
+
+      <!-- 电影卡片5：指环王（修正错误，统一信息） -->
+      <div class="movie-fact-card" data-id="5" data-title="指环王" data-img="图片/指环王.jpg" data-content="霍比特人演员每天要花4小时化妆贴脚套，夏天拍戏时脚汗能倒出半杯，却还要装作赤脚走路" data-link="电影冷知识/指环王.html">
+        <button class="collect-btn" title="收藏冷知识"><i class="fas fa-heart"></i></button>
+        <a href="电影冷知识/指环王.html" class="fact-img-link">
+          <img src="图片/指环王.jpg" alt="指环王" class="fact-img">
+        </a>
+        <h3 class="fact-movie-title"><i class="fas fa-film"></i> 指环王</h3>
+        <p class="fact-content"><i class="fas fa-angle-right"></i> 霍比特人演员每天要花4小时化妆贴脚套，夏天拍戏时脚汗能倒出半杯，却还要装作赤脚走路</p>
+      </div>
+
+      <!-- 电影卡片6：复仇者联盟（补充完整信息） -->
+      <div class="movie-fact-card" data-id="6" data-title="复仇者联盟" data-img="图片/复仇者联盟.jpg" data-content="钢铁侠第一次说'我是钢铁侠'是罗伯特·唐尼擅自加的台词，漫威总裁差点当场叫停拍摄" data-link="电影冷知识/复仇者联盟.html">
+        <button class="collect-btn" title="收藏冷知识"><i class="fas fa-heart"></i></button>
+        <a href="电影冷知识/复仇者联盟.html" class="fact-img-link">
+          <img src="图片/复仇者联盟.jpg" alt="复仇者联盟" class="fact-img"> <!-- 图片地址请自行补充 -->
+        </a>
+        <h3 class="fact-movie-title"><i class="fas fa-film"></i> 复仇者联盟</h3>
+        <p class="fact-content"><i class="fas fa-angle-right"></i> 钢铁侠第一次说"我是钢铁侠"是罗伯特·唐尼擅自加的台词，漫威总裁差点当场叫停拍摄</p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // 核心：localStorage保存收藏的冷知识，刷新不丢失
+    const COLLECT_FACTS_KEY = 'movieColdFactsCollect';
+
+    // DOM元素
+    const collectFactsList = document.getElementById('collectFactsList');
+    const collectBtns = document.querySelectorAll('.collect-btn');
+
+    // 页面加载时渲染收藏列表
+    window.addEventListener('load', renderCollectFacts);
+
+    // 给所有收藏按钮绑定事件
+    collectBtns.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault(); // 阻止跳转
+        const card = this.closest('.movie-fact-card');
+        const factData = {
+          id: card.dataset.id,
+          title: card.dataset.title,
+          img: card.dataset.img,
+          content: card.dataset.content,
+          link: card.dataset.link
+        };
+
+        // 切换收藏状态
+        if (this.classList.contains('active')) {
+          // 取消收藏
+          removeCollectFact(factData.id);
+          this.classList.remove('active');
+        } else {
+          // 添加收藏
+          addCollectFact(factData);
+          this.classList.add('active');
+        }
+
+        // 重新渲染收藏列表
+        renderCollectFacts();
+      });
+    });
+
+    // 添加收藏
+    function addCollectFact(factData) {
+      let collected = JSON.parse(localStorage.getItem(COLLECT_FACTS_KEY)) || [];
+      // 避免重复收藏
+      if (!collected.some(item => item.id === factData.id)) {
+        collected.unshift(factData); // 最新收藏在前面
+        localStorage.setItem(COLLECT_FACTS_KEY, JSON.stringify(collected));
+      }
+    }
+
+    // 取消收藏
+    function removeCollectFact(factId) {
+      let collected = JSON.parse(localStorage.getItem(COLLECT_FACTS_KEY)) || [];
+      collected = collected.filter(item => item.id !== factId);
+      localStorage.setItem(COLLECT_FACTS_KEY, JSON.stringify(collected));
+    }
+
+    // 渲染收藏列表
+    function renderCollectFacts() {
+      const collected = JSON.parse(localStorage.getItem(COLLECT_FACTS_KEY)) || [];
+      collectFactsList.innerHTML = '';
+
+      // 无收藏时显示提示
+      if (collected.length === 0) {
+        collectFactsList.innerHTML = `
+          <div class="no-collect">
+            <i class="fas fa-heart-broken"></i>
+            <p>暂无收藏的冷知识，点击卡片上的❤️图标添加收藏吧～</p>
+          </div>
+        `;
+        return;
+      }
+
+      // 渲染收藏的冷知识卡片
+      collected.forEach(fact => {
+        const card = document.createElement('div');
+        card.className = 'movie-fact-card';
+        card.innerHTML = `
+          <a href="${fact.link}" class="fact-img-link">
+            <img src="${fact.img}" alt="${fact.title}" class="fact-img">
+          </a>
+          <h3 class="fact-movie-title"><i class="fas fa-film"></i> ${fact.title}</h3>
+          <p class="fact-content"><i class="fas fa-angle-right"></i> ${fact.content}</p>
+        `;
+        collectFactsList.appendChild(card);
+      });
+
+      // 同步收藏按钮状态
+      syncCollectBtnStatus();
+    }
+
+    // 同步收藏按钮状态（页面加载时，已收藏的卡片按钮点亮）
+    function syncCollectBtnStatus() {
+      const collected = JSON.parse(localStorage.getItem(COLLECT_FACTS_KEY)) || [];
+      collectBtns.forEach(btn => {
+        const card = btn.closest('.movie-fact-card');
+        const isCollected = collected.some(item => item.id === card.dataset.id);
+        if (isCollected) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第七艺术 - 有声电影诞生</title>
+  <link rel="stylesheet" href="/CSS/style.css">
+  <!-- 复用无声电影时代的CSS文件 -->
+  <link rel="stylesheet" href="/CSS/无声电影时代.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- 导航栏 -->
+   <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">第七<span>艺术</span></a>
+      <ul class="nav-links">
+        <li><a href="\index.html">首页</a></li>
+        <li><a href="\ClassMovies.html">经典电影</a></li>
+        <li><a href="\knowledge.html">冷知识</a></li>
+        <li><a href="\history.html" class="active">电影历史</a></li>
+        <li><a href="\quotes.html">经典台词</a></li>
+        <li><a href="\talk.html">论坛</a></li>
+        <li><a href="\about.html">关于</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 主内容区（复用无声电影时代的类名，确保CSS生效） -->
+  <main class="silent-film-main">
+    <!-- 头部横幅 -->
+    <section class="silent-film-banner">
+      <div class="banner-overlay">
+        <h1>有声电影诞生</h1>
+        <p>1927 - 1930s | 光影与声音的邂逅，电影艺术的革命</p>
+        <a href="#content" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+      </div>
+    </section>
+
+    <!-- 核心内容区 -->
+    <div id="content" class="silent-film-content">
+      <!-- 时代概述 -->
+      <section class="silent-film-section overview-section">
+        <h2 class="section-title"><i class="fas fa-history"></i> 时代概述</h2>
+        <div class="section-content">
+          <p>有声电影（Talking Picture）的诞生是电影史上最具革命性的突破，以1927年《爵士歌王》公映为标志，终结了30余年的无声电影时代。这一变革将声音（对白、音乐、音效）与影像结合，彻底重塑了电影的叙事逻辑、表演风格和工业生产模式。</p>
+          <p>从早期“蜡盘发声”到成熟“光学录音”，技术迭代仅用数年。声音让电影从“视觉艺术”升级为“视听综合艺术”：对白成为叙事核心，音乐强化情感，音效增强沉浸感，推动电影行业进入规模化、工业化的黄金时代。</p>
+        </div>
+      </section>
+
+      <!-- 核心模块（标签切换，复用类名确保JS交互生效） -->
+      <section class="silent-film-section core-section">
+        <div class="tab-buttons">
+          <button class="tab-btn active" data-tab="figures">代表人物与机构</button>
+          <button class="tab-btn" data-tab="films">里程碑影片</button>
+          <button class="tab-btn" data-tab="technology">技术革命</button>
+        </div>
+
+        <!-- 代表人物与机构 -->
+        <div class="tab-content active" id="figures">
+          <div class="figures-grid">
+            <div class="figure-card">
+              <img src="/图片/阿尔乔尔森.jpg" alt="阿尔·乔尔森">
+              <h3>阿尔·乔尔森</h3>
+              <p class="role">“有声电影第一人” | 1886-1950</p>
+              <p class="intro">美国犹太裔歌手、演员，主演世界第一部有声电影《爵士歌王》。片中台词“你还没听到什么呢！”成为影史经典，其表演让观众首次体验“声画同步”的震撼，直接推动有声电影普及。</p>
+            </div>
+            <div class="figure-card">
+              <img src="/图片/华纳兄弟.jpg" alt="华纳兄弟">
+              <h3>华纳兄弟</h3>
+              <p class="role">有声电影推动者 | 制片厂创立于1918年</p>
+              <p class="intro">四兄弟创立的电影公司，在行业质疑声中孤注一掷，研发“维他风”有声系统，拍摄《爵士歌王》大获成功，彻底改变电影行业格局，奠定好莱坞工业基础。</p>
+            </div>
+            <div class="figure-card">
+              <img src="/图片/大卫格里菲斯.jpg" alt="大卫·格里菲斯">
+              <p class="role">有声电影探索者 | 1875-1948</p>
+              <p class="intro">无声电影时代叙事革新者，有声技术出现后积极探索声画融合，执导《林肯传》等早期有声片，为有声电影叙事逻辑奠定基础。</p>
+            </div>
+            <div class="figure-card">
+              <img src="/图片/道格拉斯范朋克.jpg" alt="道格拉斯·范朋克">
+              <p class="role">转型成功的默片巨星 | 1883-1939</p>
+              <p class="intro">无声时代“动作巨星”，面对有声冲击克服口音障碍成功转型，证明默片明星并非“有声即亡”，推动演员表演风格革新。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 里程碑影片 -->
+        <div class="tab-content" id="films">
+          <div class="films-grid">
+            <div class="film-card">
+              <img src="/图片/爵士歌王.jpg" alt="爵士歌王">
+              <h3>爵士歌王 (The Jazz Singer)</h3>
+              <p class="year">1927 | 美国 | 艾伦·克罗斯兰 导演</p>
+              <p class="intro">世界第一部“部分有声”电影，以“维他风”蜡盘技术实现歌曲与少量对白同步。公映后票房狂揽400万美元，直接宣告有声时代到来。</p>
+            </div>
+            <div class="film-card">
+              <img src="/图片/纽约之光.jpg" alt="纽约之光">
+              <h3>纽约之光 (Lights of New York)</h3>
+              <p class="year">1928 | 美国 | 布莱恩·福伊 导演</p>
+              <p class="intro">世界第一部“全有声”故事片，全程声画同步，证明有声电影的商业可行性，引发好莱坞制片厂集体转型。</p>
+            </div>
+            <div class="film-card">
+              <img src="/图片/西线无战事.jpg" alt="西线无战事">
+              <h3>西线无战事 (All Quiet on the Western Front)</h3>
+              <p class="year">1930 | 美国 | 刘易斯·迈尔斯通 导演</p>
+              <p class="intro">有声电影早期艺术巅峰，以炮火声、呐喊与寂静的对比强化反战主题，成为首部获奥斯卡最佳影片的有声电影。</p>
+            </div>
+            <div class="film-card">
+              <img src="/图片/百老汇旋律.jpg" alt="百老汇旋律">
+              <h3>百老汇旋律 (The Broadway Melody)</h3>
+              <p class="year">1929 | 美国 | 哈里·博蒙特 导演</p>
+              <p class="intro">首部获奥斯卡最佳影片的有声电影，开创“歌舞片”类型，将音乐与剧情深度融合，展现有声电影的类型潜力。</p>
+            </div>
+            <div class="film-card">
+              <img src="/图片/摩洛哥.jpg" alt="摩洛哥">
+              <h3>摩洛哥 (Morocco)</h3>
+              <p class="year">1930 | 美国 | 约瑟夫·冯·斯登堡 导演</p>
+              <p class="intro">早期有声爱情片经典，玛琳·黛德丽凭借声音魅力与银幕气质成名，推动表演风格向“声音表现力”转型。</p>
+            </div>
+            <div class="film-card">
+              <img src="/图片/蓝天使.jpg" alt="蓝天使">
+              <h3>蓝天使 (The Blue Angel)</h3>
+              <p class="year">1930 | 德国 | 约瑟夫·冯·斯登堡 导演</p>
+              <p class="intro">第一部德语文艺有声片，以细腻声音设计与人物刻画成为欧洲有声电影标杆，影响后世文艺片创作。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 技术革命 -->
+        <div class="tab-content" id="technology">
+          <div class="tech-grid">
+            <div class="tech-card">
+              <h3><i class="fas fa-volume-up"></i> 发声技术演进</h3>
+              <ul>
+                <li>蜡盘发声（维他风系统）：1926年推出，声音记录在蜡盘上，与影片同步播放（《爵士歌王》采用）。</li>
+                <li>光学录音：1929年成熟，声音转化为光学信号记录在胶片边缘，实现“声画一体”，解决同步难题。</li>
+                <li>磁性录音：1930年代后期出现，音质更清晰、编辑灵活，为后期配音和音效设计提供可能。</li>
+              </ul>
+            </div>
+            <div class="tech-card">
+              <h3><i class="fas fa-film"></i> 拍摄与制作革新</h3>
+              <ul>
+                <li>隔音摄影棚：避免录音干扰，取代开放式拍摄空间，成为标准配置。</li>
+                <li>麦克风隐藏技术：从大型固定麦克风到隐藏式设计，不影响画面构图。</li>
+                <li>剪辑技术升级：声音成为剪辑核心依据，出现“声画蒙太奇”，节奏控制更精准。</li>
+              </ul>
+            </div>
+            <div class="tech-card">
+              <h3><i class="fas fa-theater-masks"></i> 表演风格转型</h3>
+              <ul>
+                <li>从“肢体夸张”到“自然内敛”：对白成为核心，表演更贴近现实生活。</li>
+                <li>声音表现力成关键：演员嗓音、台词功底成为选角标准，一批“声音明星”崛起。</li>
+                <li>群戏调度革新：多人对白场景需精准走位和节奏控制，推动场面调度优化。</li>
+              </ul>
+            </div>
+            <div class="tech-card">
+              <h3><i class="fas fa-industry"></i> 行业格局变革</h3>
+              <ul>
+                <li>制片厂转型：大公司投入巨资改造设备，小厂因资金不足被淘汰，行业集中度提升。</li>
+                <li>院线升级：全球影院加装音响设备，“有声影院”成标配，观影体验与成本同步提升。</li>
+                <li>版权保护：音乐、对白版权问题凸显，推动电影版权制度完善。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 历史意义 -->
+      <section class="silent-film-section significance-section">
+        <h2 class="section-title"><i class="fas fa-monument"></i> 历史意义</h2>
+        <div class="section-content">
+          <div class="significance-grid">
+            <div class="significance-item">
+              <h3><i class="fas fa-palette"></i> 艺术表达的升级</h3>
+              <p>声音让电影从“视觉叙事”升级为“视听综合叙事”，对白、音乐、音效成为独立艺术元素，情感表达更细腻，叙事层次更丰富，推动电影成为成熟综合艺术。</p>
+            </div>
+            <div class="significance-item">
+              <h3><i class="fas fa-cogs"></i> 工业体系的成熟</h3>
+              <p>有声技术推动电影工业标准化、规模化，从拍摄设备到院线发行形成完整产业链，好莱坞制片厂制度走向巅峰，奠定后续电影工业基础。</p>
+            </div>
+            <div class="significance-item">
+              <h3><i class="fas fa-film"></i> 类型片的繁荣</h3>
+              <p>声音为类型片拓展提供可能：歌舞片因声音诞生，悬疑片通过音效强化紧张感，剧情片通过对白深化人物，电影受众更广泛，成为全民娱乐方式。</p>
+            </div>
+            <div class="significance-item">
+              <h3><i class="fas fa-globe"></i> 文化传播的革新</h3>
+              <p>虽因语言存在传播壁垒，但推动了配音、字幕技术发展，电影成为传递价值观、传播文化的重要载体，影响全球文化格局。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- 返回顶部按钮 -->
+  <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+
+  <!-- 复用无声电影时代的JS文件 -->
+  <script src="/JS/silent-film.js"></script>
+</body>
+</html>

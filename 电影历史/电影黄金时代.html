@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第七艺术 - 电影的黄金时代</title>
+  <link rel="stylesheet" href="/CSS/style.css">
+  <!-- 复用无声电影时代的CSS文件 -->
+  <link rel="stylesheet" href="/CSS/无声电影时代.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">第七<span>艺术</span></a>
+      <ul class="nav-links">
+        <li><a href="\index.html">首页</a></li>
+        <li><a href="\ClassMovies.html">经典电影</a></li>
+        <li><a href="\knowledge.html">冷知识</a></li>
+        <li><a href="\history.html" class="active">电影历史</a></li>
+        <li><a href="\quotes.html">经典台词</a></li>
+        <li><a href="\talk.html">论坛</a></li>
+        <li><a href="\about.html">关于</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 主内容区（复用类名确保CSS生效） -->
+  <main class="silent-film-main">
+    <!-- 头部横幅 -->
+    <section class="silent-film-banner">
+      <div class="banner-overlay">
+        <h1>电影的黄金时代</h1>
+        <p>1930s - 1950s | 好莱坞的辉煌巅峰，类型片的黄金盛世</p>
+        <a href="#content" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+      </div>
+    </section>
+
+    <!-- 核心内容区 -->
+    <div id="content" class="silent-film-content">
+      <!-- 时代概述 -->
+      <section class="silent-film-section overview-section">
+        <h2 class="section-title"><i class="fas fa-history"></i> 时代概述</h2>
+        <div class="section-content">
+          <p>电影的黄金时代（Golden Age of Hollywood）特指1930年代至1950年代的好莱坞电影盛世，是电影工业与艺术表达的双重巅峰。这一时期以“制片厂制度”为核心，有声技术成熟、彩色电影普及，类型片高度繁荣，诞生了一大批经典作品与银幕巨星，确立了好莱坞在全球电影行业的主导地位。</p>
+          <p>黄金时代的核心特征的是“标准化生产+艺术创新”：各大制片厂（米高梅、华纳、派拉蒙等）形成垂直整合体系，从剧本创作、拍摄制作到院线发行全程把控；同时，导演、演员、编剧形成稳定合作模式，类型片（西部片、喜剧片、悬疑片、歌舞片等）不断迭代升级，形成了辨识度极高的“好莱坞风格”，影响了全球电影的发展方向。</p>
+        </div>
+      </section>
+
+      <!-- 核心模块（标签切换，复用类名确保JS交互生效） -->
+      <section class="silent-film-section core-section">
+        <div class="tab-buttons">
+          <button class="tab-btn active" data-tab="figures">代表人物与制片厂</button>
+          <button class="tab-btn" data-tab="films">传世经典影片</button>
+          <button class="tab-btn" data-tab="technology">类型片繁荣</button>
+        </div>
+
+        <!-- 代表人物与制片厂 -->
+        <div class="tab-content active" id="figures">
+          <div class="figures-grid">
+            <div class="figure-card">
+              <img src="/图片/阿尔弗雷德希区柯克.jpg" alt="阿尔弗雷德·希区柯克">
+              <h3>阿尔弗雷德·希区柯克</h3>
+              <p class="role">悬疑大师 | 1899-1980</p>
+              <p class="intro">英国裔美国导演，“悬疑片之父”，擅长用镜头语言制造紧张感与心理恐惧。代表作《迷魂记》《后窗》《西北偏北》，开创了“希区柯克式悬疑”，将悬疑片从类型片提升至艺术高度，影响后世无数导演。</p>
+            </div>
+            <div class="figure-card">
+              <img src="/图片/米高梅制片厂.jpg" alt="米高梅制片厂">
+              <h3>米高梅制片厂（MGM）</h3>
+              <p class="role">“群星汇聚的雄狮” | 1924年成立</p>
+              <p class="intro">黄金时代最具影响力的制片厂，以“更多明星、更大制作”为理念，拥有克拉克·盖博、费雯·丽等顶级巨星，出品《乱世佳人》《绿野仙踪》等经典。其“雄狮”标志成为好莱坞黄金时代的象征，巅峰时期掌控全球近1/3的电影市场。</p>
+            </div>
+            <div class="figure-card">
+              <img src="/图片/克拉克盖博.jpg" alt="克拉克·盖博">
+              <p class="role">银幕硬汉代表 | 1901-1960</p>
+              <p class="intro">米高梅签约巨星，“好莱坞最有魅力的男人”，代表作《乱世佳人》中饰演的瑞德·巴特勒成为经典硬汉形象。他的表演自然洒脱，兼具阳刚之气与温柔细腻，是黄金时代“明星制”的核心代表。</p>
+            </div>
+            <div class="figure-card">
+              <img src="/图片/约翰福特.jpg" alt="约翰·福特">
+              <p class="role">西部片宗师 | 1894-1973</p>
+              <p class="intro">美国国宝级导演，一生执导140余部影片，以西部片奠定地位。代表作《关山飞渡》《搜索者》，开创了西部片的视觉语言与叙事模式，用纪念碑谷的壮丽风光与英雄主义内核，定义了“美国精神”的银幕表达。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 传世经典影片 -->
+        <div class="tab-content" id="films">
+          <div class="films-grid">
+            <div class="film-card">
+              <img src="/图片/乱世佳人.jpg" alt="乱世佳人">
+              <h3>乱世佳人 (Gone with the Wind)</h3>
+              <p class="year">1939 | 美国 | 维克多·弗莱明 导演</p>
+              <p class="intro">改编自小说《飘》，耗资400万美元的超级制作，斩获10项奥斯卡大奖。以美国内战为背景，讲述郝思嘉的爱情与成长，费雯·丽与克拉克·盖博的表演堪称经典，至今仍是影史最具影响力的史诗爱情片。</p>
+            </div>
+            <div class="film-card">
+              <img src="/图片/卡萨布兰卡.jpg" alt="卡萨布兰卡">
+              <h3>卡萨布兰卡 (Casablanca)</h3>
+              <p class="year">1942 | 美国 | 迈克尔·柯蒂斯 导演</p>
+              <p class="intro">二战背景下的爱情经典，亨弗莱·鲍嘉与英格丽·褒曼主演。“我们永远拥有巴黎”“世界上有那么多城镇，城镇里有那么多酒馆”等台词成为影史名言，影片以小见大，将个人爱情与家国情怀完美融合。</p>
+            </div>
+            <div class="film-card">
+              <img src="/图片/公民凯恩.jpg" alt="公民凯恩">
+              <h3>公民凯恩 (Citizen Kane)</h3>
+              <p class="year">1941 | 美国 | 奥逊·威尔斯 导演</p>
+              <p class="intro">被称为“影史第一神作”，奥逊·威尔斯25岁时的处女作。创新运用深焦摄影、非线性叙事，讲述报业大亨凯恩的一生，探讨权力与孤独的主题，其拍摄手法至今仍被奉为电影学院的教学范本。</p>
+            </div>
+            <div class="film-card">
+              <img src="/图片/绿野仙踪.jpg" alt="绿野仙踪">
+              <h3>绿野仙踪 (The Wizard of Oz)</h3>
+              <p class="year">1939 | 美国 | 维克多·弗莱明 导演</p>
+              <p class="intro">儿童奇幻片的开山之作，首次大规模运用彩色胶片，黄砖路、红宝石鞋成为流行文化符号。影片传递“家是心灵归宿”的主题，音乐与画面完美融合，是跨年龄层的经典之作。</p>
+            </div>
+            <div class="film-card">
+              <img src="/图片/关山飞渡.jpg" alt="关山飞渡">
+              <h3>关山飞渡 (Stagecoach)</h3>
+              <p class="year">1939 | 美国 | 约翰·福特 导演</p>
+              <p class="intro">西部片的里程碑，将西部片从“B级片”提升至主流艺术类型。以驿站马车旅行为线索，串联起不同阶层的人物，纪念碑谷的壮丽风光与紧张的追逐场面，奠定了西部片的视觉与叙事范式。</p>
+            </div>
+            <div class="film-card">
+              <img src="/图片/罗马假日.jpg" alt="罗马假日">
+              <h3>罗马假日 (Roman Holiday)</h3>
+              <p class="year">1953 | 美国 | 威廉·惠勒 导演</p>
+              <p class="intro">奥黛丽·赫本的成名作，浪漫爱情片的典范。讲述公主与记者的短暂邂逅，赫本的优雅与派克的绅士风度相得益彰，罗马的街头风光成为爱情的背景板，“遗憾之美”的结局打动无数观众。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 类型片繁荣 -->
+        <div class="tab-content" id="technology">
+          <div class="tech-grid">
+            <div class="tech-card">
+              <h3><i class="fas fa-cowboy"></i> 西部片（Western）</h3>
+              <ul>
+                <li>核心元素：牛仔、警长、荒野、正义与邪恶的对抗。</li>
+                <li>代表作：《关山飞渡》《搜索者》《正午》。</li>
+                <li>文化意义：象征美国西部开拓精神，构建了“美国英雄”的银幕形象。</li>
+              </ul>
+            </div>
+            <div class="tech-card">
+              <h3><i class="fas fa-heart"></i> 爱情片（Romance）</h3>
+              <ul>
+                <li>核心元素：跨越阶层的爱情、乱世中的相守、遗憾与圆满。</li>
+                <li>代表作：《乱世佳人》《卡萨布兰卡》《罗马假日》。</li>
+                <li>文化意义：用爱情映射时代，传递普世的情感价值，塑造了经典银幕情侣形象。</li>
+              </ul>
+            </div>
+            <div class="tech-card">
+              <h3><i class="fas fa-brain"></i> 悬疑片（Mystery）</h3>
+              <ul>
+                <li>核心元素：悬念设置、心理博弈、反转结局。</li>
+                <li>代表作：《迷魂记》《后窗》《蝴蝶梦》。</li>
+                <li>文化意义：探索人性黑暗面，用镜头语言制造紧张感，推动电影叙事技巧革新。</li>
+              </ul>
+            </div>
+            <div class="tech-card">
+              <h3><i class="fas fa-music"></i> 歌舞片（Musical）</h3>
+              <ul>
+                <li>核心元素：音乐、舞蹈与剧情融合，欢乐明快的基调。</li>
+                <li>代表作：《雨中曲》《一个美国人在巴黎》《音乐之声》（早期）。</li>
+                <li>文化意义：发挥有声电影优势，将娱乐性与艺术性结合，成为黄金时代的“全民娱乐”。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 历史意义 -->
+      <section class="silent-film-section significance-section">
+        <h2 class="section-title"><i class="fas fa-monument"></i> 历史意义</h2>
+        <div class="section-content">
+          <div class="significance-grid">
+            <div class="significance-item">
+              <h3><i class="fas fa-industry"></i> 电影工业的标杆</h3>
+              <p>制片厂制度实现了电影的标准化、规模化生产，从创作到发行的垂直整合模式，成为全球电影工业的参考范本。明星制、类型化生产等机制，为电影产业的商业化发展奠定了基础。</p>
+            </div>
+            <div class="significance-item">
+              <h3><i class="fas fa-film"></i> 类型片的巅峰</h3>
+              <p>黄金时代完善了西部片、悬疑片、爱情片等核心类型的叙事规则与视觉语言，形成了“类型即语言”的创作模式，为后世类型片的创新与融合提供了丰富素材。</p>
+            </div>
+            <div class="significance-item">
+              <h3><i class="fas fa-star"></i> 银幕文化的普及</h3>
+              <p>克拉克·盖博、奥黛丽·赫本、英格丽·褒曼等巨星成为全球文化符号，他们的形象与作品超越国界，推动电影成为真正的“全球语言”，影响了几代人的审美与价值观。</p>
+            </div>
+            <div class="significance-item">
+              <h3><i class="fas fa-palette"></i> 艺术与商业的平衡</h3>
+              <p>黄金时代的电影既满足大众娱乐需求，又保持极高的艺术水准，实现了商业价值与艺术表达的完美平衡。这种“雅俗共赏”的创作理念，至今仍是电影创作的重要准则。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- 返回顶部按钮 -->
+  <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+
+  <!-- 复用无声电影时代的JS文件 -->
+  <script src="/JS/silent-film.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+/* 轮播组件样式 - 新片展示 */
+.carousel-container {
+  position: relative;
+  max-width: 1100px;
+  margin: 2rem auto 4rem;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(156, 39, 176, 0.2);
+}
+
+.carousel-wrapper {
+  display: flex;
+  transition: transform 0.5s ease; /* 滑动动画 */
+}
+
+.carousel-item {
+  min-width: 100%; /* 每次显示一个 */
+  position: relative;
+}
+
+/* 电影图片容器（用户替换自己的图） */
+.carousel-img {
+  width: 100%;
+  height: 500px; /* 图片高度，可调整 */
+  object-fit: cover; /* 保持图片比例 */
+}
+
+/* 图片上的文字遮罩 */
+.carousel-desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  background: linear-gradient(transparent, rgba(0,0,0,0.9)); /* 渐变遮罩，文字更清晰 */
+}
+
+.carousel-desc h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-white);
+}
+
+.carousel-desc p {
+  color: var(--text-gray);
+  max-width: 800px;
+}
+
+/* 控制按钮 */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background: var(--red-primary);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.btn-prev { left: 1rem; }
+.btn-next { right: 1rem; }
+
+/* 指示器（小圆点） */
+.carousel-indicators {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.8rem;
+  z-index: 10;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.indicator.active {
+  background: var(--red-primary);
+  width: 30px;
+  border-radius: 6px; /* 激活状态变成长条 */
+}
+
+/* 轮播响应式调整 */
+@media (max-width: 768px) {
+  .carousel-img {
+    height: 350px; /* 移动端图片高度 */
+  }
+
+  .carousel-desc {
+    padding: 1.5rem;
+  }
+
+  .carousel-desc h3 {
+    font-size: 1.4rem;
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}

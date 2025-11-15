@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第七艺术 - 数字电影革命</title>
+  <link rel="stylesheet" href="/CSS/style.css">
+  <!-- 复用统一CSS文件 -->
+  <link rel="stylesheet" href="/CSS/无声电影时代.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- 导航栏 -->
+    <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">第七<span>艺术</span></a>
+      <ul class="nav-links">
+        <li><a href="\index.html">首页</a></li>
+        <li><a href="\ClassMovies.html">经典电影</a></li>
+        <li><a href="\knowledge.html">冷知识</a></li>
+        <li><a href="\history.html" class="active">电影历史</a></li>
+        <li><a href="\quotes.html">经典台词</a></li>
+        <li><a href="\talk.html">论坛</a></li>
+        <li><a href="\about.html">关于</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 主内容区（复用类名确保样式统一） -->
+  <main class="silent-film-main">
+    <!-- 头部横幅 -->
+    <section class="silent-film-banner">
+      <div class="banner-overlay">
+        <h1>数字电影革命</h1>
+        <p>1990s末 - 至今 | 技术重塑想象，光影迈入新纪元</p>
+        <a href="#content" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+      </div>
+    </section>
+
+    <!-- 核心内容区 -->
+    <div id="content" class="silent-film-content">
+      <!-- 时代概述 -->
+      <section class="silent-film-section overview-section">
+        <h2 class="section-title"><i class="fas fa-history"></i> 时代概述</h2>
+        <div class="section-content">
+          <p>数字电影革命是电影史上继有声、彩色之后的第三次技术革命，以数字技术全面替代传统胶片技术为核心，覆盖电影制作、发行、放映、存储全产业链。从1995年第一部全CG动画《玩具总动员》诞生，到2009年《阿凡达》推动3D数字放映普及，再到如今流媒体平台与虚拟制作的兴起，数字技术彻底打破了电影创作的物理边界与行业壁垒。</p>
+          <p>这一革命的核心是“技术赋能创意”：数字摄影机让拍摄更灵活高效，CGI（计算机生成图像）让虚构世界与奇幻生物成为现实，动作捕捉技术模糊了真人与动画的界限，而流媒体则重构了电影的传播与消费方式。数字技术不仅降低了创作门槛，让独立电影获得更多机会，更将电影的视觉奇观推向极致，形成了“特效大片”与“人文小品”并存、全球协同制作的多元生态。</p>
+        </div>
+      </section>
+
+      <!-- 核心模块（标签切换，复用JS交互） -->
+      <section class="silent-film-section core-section">
+        <div class="tab-buttons">
+          <button class="tab-btn active" data-tab="figures">技术先驱与推动者</button>
+          <button class="tab-btn" data-tab="films">里程碑作品</button>
+          <button class="tab-btn" data-tab="technology">全产业链变革</button>
+        </div>
+
+        <!-- 技术先驱与推动者 -->
+        <div class="tab-content active" id="figures">
+          <div class="figures-grid">
+            <div class="figure-card">
+              <img src="/图片/詹姆斯卡梅隆.jpg" alt="詹姆斯·卡梅隆">
+              <h3>詹姆斯·卡梅隆</h3>
+              <p class="role">技术狂人 | 1954-</p>
+              <p class="intro">数字电影的坚定推动者，《泰坦尼克号》首次大规模运用数字合成技术，《阿凡达》则将3D、动作捕捉与虚拟摄影融为一体，创造了潘多拉星球的奇幻世界。他始终以技术突破服务叙事，推动数字放映标准的确立，被誉为“用技术定义电影未来”的导演。</p>
+            </div>
+            <div class="figure-card">
+              <img src="/图片/皮克斯工作室.jpg" alt="皮克斯工作室">
+              <h3>皮克斯工作室（Pixar）</h3>
+              <p class="role">全CG动画开创者 | 1986年成立</p>
+              <p class="intro">从《玩具总动员》到《寻梦环游记》，皮克斯始终引领CG动画技术与艺术的融合。其研发的RenderMan渲染器成为行业标准，而“技术为故事服务”的理念，让数字动画不仅是技术展示，更充满情感温度，彻底改变了动画电影的地位。</p>
+            </div>
+            <div class="figure-card">
+              <img src="/图片/彼得杰克逊.jpg" alt="彼得·杰克逊">
+              <p class="role">动作捕捉革新者 | 1961-</p>
+              <p class="intro">在《指环王》三部曲中，通过动作捕捉技术让“咕噜”成为影史首个逼真的数字角色；《阿凡达》中进一步优化技术，实现真人演员与数字环境的实时互动。他将数字技术与史诗叙事完美结合，证明了数字角色可以承载复杂情感，而非单纯的视觉奇观。</p>
+            </div>
+            <div class="figure-card">
+              <img src="/图片/史蒂文斯皮尔伯格2.jpg" alt="史蒂文·斯皮尔伯格">
+              <p class="role">跨界融合者 | 1946-</p>
+              <p class="intro">从《人工智能》探索数字角色的情感表达，到《头号玩家》构建全CG虚拟世界，斯皮尔伯格始终拥抱数字技术，却不迷信技术。他擅长用数字工具讲述人文故事，平衡视觉奇观与情感共鸣，为数字电影树立了“技术服务于内容”的典范。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 里程碑作品 -->
+        <div class="tab-content" id="films">
+          <div class="films-grid">
+            <div class="film-card">
+              <img src="/图片/玩具总动员.jpg" alt="玩具总动员">
+              <h3>玩具总动员 (Toy Story)</h3>
+              <p class="year">1995 | 美国 | 约翰·拉塞特 导演</p>
+              <p class="intro">世界第一部全CG动画长片，由皮克斯与迪士尼联合出品。影片用数字技术赋予玩具生命，渲染效果在当时堪称奇迹，不仅开创了CG动画类型，更证明了数字技术可以打造兼具娱乐性与情感深度的作品，开启数字电影时代。</p>
+            </div>
+            <div class="film-card">
+              <img src="/图片/阿凡达.jpg" alt="阿凡达">
+              <h3>阿凡达 (Avatar)</h3>
+              <p class="year">2009 | 美国 | 詹姆斯·卡梅隆 导演</p>
+              <p class="intro">数字电影的巅峰之作，运用虚拟摄影、动作捕捉、3D立体成像等多项革新技术，创造了沉浸式的潘多拉星球。全球票房达29亿美元，推动全球影院大规模升级数字放映设备，让3D电影成为主流，彻底终结了胶片放映时代。</p>
+            </div>
+            <div class="film-card">
+              <img src="/图片/指环王双塔奇兵.jpg" alt="指环王：双塔奇兵">
+              <h3>指环王：双塔奇兵 (The Lord of the Rings: The Two Towers)</h3>
+              <p class="year">2002 | 美国/新西兰 | 彼得·杰克逊 导演</p>
+              <p class="intro">动作捕捉技术的里程碑，数字角色“咕噜”通过安迪·瑟金斯的表演与数字技术结合，成为首个具有复杂情感的数字角色。影片证明数字角色可以深度参与叙事，而非单纯的特效点缀，推动了动作捕捉技术的普及。</p>
+            </div>
+            <div class="film-card">
+              <img src="/图片/少年派的奇幻漂流.jpg" alt="少年派的奇幻漂流">
+              <h3>少年派的奇幻漂流 (Life of Pi)</h3>
+              <p class="year">2012 | 美国/中国台湾 | 李安 导演</p>
+              <p class="intro">数字特效与人文叙事的完美融合，片中的孟加拉虎“理查德·帕克”全程由CGI生成，逼真度达到以假乱真的程度。李安用数字技术构建了海难中的奇幻场景，证明数字特效不仅能制造奇观，更能传递细腻的情感与哲学思考。</p>
+            </div>
+            <div class="film-card">
+              <img src="/图片/黑客帝国.jpg" alt="黑客帝国">
+              <h3>黑客帝国 (The Matrix)</h3>
+              <p class="year">1999 | 美国 | 沃卓斯基姐妹 导演</p>
+              <p class="intro">开创了“子弹时间”等标志性数字特效，将哲学思考与科幻动作结合。影片用数字技术重构了虚拟与现实的边界，其创新的视觉风格影响了后续所有动作电影，证明数字技术可以创造全新的电影语言。</p>
+            </div>
+            <div class="film-card">
+              <img src="/图片/蜘蛛侠：平行宇宙.jpg" alt="蜘蛛侠：平行宇宙">
+              <h3>蜘蛛侠：平行宇宙 (Spider-Man: Into the Spider-Verse)</h3>
+              <p class="year">2018 | 美国 | 鲍勃·佩尔西凯蒂 等导演</p>
+              <p class="intro">打破传统CG动画风格，融合手绘、漫画、3D等多种视觉元素，创造出“漫画感”十足的数字动画。影片证明数字技术不仅能追求逼真，更能探索多元化的艺术表达，为动画电影开辟了新方向。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 全产业链变革 -->
+        <div class="tab-content" id="technology">
+          <div class="tech-grid">
+            <div class="tech-card">
+              <h3><i class="fas fa-camera"></i> 制作端革新</h3>
+              <ul>
+                <li>数字摄影机：取代胶片摄影机，拍摄成本降低，后期剪辑更灵活（代表：RED摄影机）。</li>
+                <li>CGI与虚拟制作：绿幕合成、数字场景搭建、虚拟人技术，打破物理拍摄限制（如《曼达洛人》的StageCraft技术）。</li>
+                <li>动作捕捉：从“咕噜”到“阿凡达”，实现真人表演与数字角色的无缝衔接。</li>
+              </ul>
+            </div>
+            <div class="tech-card">
+              <h3><i class="fas fa-film"></i> 发行与放映端变革</h3>
+              <ul>
+                <li>数字发行：卫星传输替代胶片拷贝，发行成本大幅降低，全球同步上映成为可能。</li>
+                <li>数字放映：3D、IMAX、4K/8K高分辨率放映，提升观影沉浸感（《阿凡达》推动3D普及）。</li>
+                <li>流媒体平台：Netflix、Disney+等平台重构发行逻辑，“院网同步”成为新趋势。</li>
+              </ul>
+            </div>
+            <div class="tech-card">
+              <h3><i class="fas fa-lightbulb"></i> 创作生态变革</h3>
+              <ul>
+                <li>门槛降低：家用数字设备与免费剪辑软件，让独立创作者、短片制作者获得更多机会。</li>
+                <li>全球协同：跨国团队通过数字文件协作，实现“全球合拍”模式（如《长城》《沙丘》）。</li>
+                <li>类型拓展：科幻、奇幻、超级英雄等依赖特效的类型片繁荣，动画电影成为主流类型。</li>
+              </ul>
+            </div>
+            <div class="tech-card">
+              <h3><i class="fas fa-user"></i> 受众与消费变革</h3>
+              <ul>
+                <li>观影方式多元：从影院到手机、平板，随时随地观影成为常态。</li>
+                <li>互动电影兴起：《黑镜：潘达斯奈基》等作品让观众参与剧情选择，拓展电影边界。</li>
+                <li>粉丝文化强化：数字平台让电影IP的二次创作与传播更便捷，形成“IP宇宙”生态。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 历史意义 -->
+      <section class="silent-film-section significance-section">
+        <h2 class="section-title"><i class="fas fa-monument"></i> 历史意义</h2>
+        <div class="section-content">
+          <div class="significance-grid">
+            <div class="significance-item">
+              <h3><i class="fas fa-palette"></i> 艺术表达的无限延伸</h3>
+              <p>数字技术让电影彻底摆脱物理世界的束缚，创作者可以自由构建任何想象中的场景、生物与叙事结构，电影的视觉表现力与叙事可能性被推向极致，为“第七艺术”注入全新活力。</p>
+            </div>
+            <div class="significance-item">
+              <h3><i class="fas fa-cogs"></i> 电影工业的效率革命</h3>
+              <p>数字技术简化了制作流程、降低了发行成本，让电影工业从“高门槛、高风险”的传统模式，转向“规模化、多元化”的现代产业，推动了全球电影市场的繁荣与协同。</p>
+            </div>
+            <div class="significance-item">
+              <h3><i class="fas fa-globe"></i> 受众触达的无界融合</h3>
+              <p>流媒体与数字传播打破了地域、时间、设备的限制，电影不再是“影院专属”，成为全民可及的文化产品，同时促进了不同文化背景的电影作品交流与融合。</p>
+            </div>
+            <div class="significance-item">
+              <h3><i class="fas fa-road"></i> 未来发展的无限可能</h3>
+              <p>虚拟制作、AI辅助创作、元宇宙电影等新技术正在兴起，数字电影革命尚未终结。它不仅重塑了当下的电影生态，更奠定了未来电影“技术与艺术深度融合、虚拟与现实边界模糊”的发展方向。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- 返回顶部按钮 -->
+  <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+
+  <!-- 复用统一JS文件 -->
+  <script src="/JS/silent-film.js"></script>
+</body>
+</html>

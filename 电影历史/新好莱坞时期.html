@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第七艺术 - 新好莱坞时代</title>
+  <link rel="stylesheet" href="/CSS/style.css">
+  <!-- 复用统一CSS文件 -->
+  <link rel="stylesheet" href="/CSS/无声电影时代.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">第七<span>艺术</span></a>
+      <ul class="nav-links">
+        <li><a href="\index.html">首页</a></li>
+        <li><a href="\ClassMovies.html">经典电影</a></li>
+        <li><a href="\knowledge.html">冷知识</a></li>
+        <li><a href="\history.html" class="active">电影历史</a></li>
+        <li><a href="\quotes.html">经典台词</a></li>
+        <li><a href="\talk.html">论坛</a></li>
+        <li><a href="\about.html">关于</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 主内容区（复用类名确保样式统一） -->
+  <main class="silent-film-main">
+    <!-- 头部横幅 -->
+    <section class="silent-film-banner">
+      <div class="banner-overlay">
+        <h1>新好莱坞时代</h1>
+        <p>1967 - 1980s | 导演的觉醒与电影的叛逆</p>
+        <a href="#content" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+      </div>
+    </section>
+
+    <!-- 核心内容区 -->
+    <div id="content" class="silent-film-content">
+      <!-- 时代概述 -->
+      <section class="silent-film-section overview-section">
+        <h2 class="section-title"><i class="fas fa-history"></i> 时代概述</h2>
+        <div class="section-content">
+          <p>新好莱坞时代（New Hollywood）是好莱坞电影的革新浪潮，始于1967年《邦妮和克莱德》的上映，终于1980年代初“高概念电影”的兴起。这一时期打破了传统制片厂制度的桎梏，年轻导演成为创作核心，他们深受欧洲艺术电影影响，将个人表达、社会批判与商业叙事结合，彻底重塑了好莱坞的创作生态。</p>
+          <p>战后婴儿潮一代成为主流观众，他们对传统类型片产生审美疲劳，催生了更具现实感、反叛精神的作品。新好莱坞导演摒弃“大团圆结局”，聚焦社会边缘人物与时代焦虑（如越战创伤、种族问题、青年迷茫），同时在技术上大胆创新（如手持摄影、跳切剪辑），形成了“作者电影”与商业大片并存的独特格局，为现代好莱坞电影奠定了创作范式。</p>
+        </div>
+      </section>
+
+      <!-- 核心模块（标签切换，复用JS交互） -->
+      <section class="silent-film-section core-section">
+        <div class="tab-buttons">
+          <button class="tab-btn active" data-tab="figures">革新派导演</button>
+          <button class="tab-btn" data-tab="films">标志性作品</button>
+          <button class="tab-btn" data-tab="technology">风格与变革</button>
+        </div>
+
+        <!-- 革新派导演 -->
+        <div class="tab-content active" id="figures">
+          <div class="figures-grid">
+            <div class="figure-card">
+              <img src="/图片/弗朗西斯科波拉.jpg" alt="弗朗西斯·福特·科波拉">
+              <h3>弗朗西斯·福特·科波拉</h3>
+              <p class="role">作者电影旗手 | 1939-</p>
+              <p class="intro">以《教父》三部曲重新定义黑帮片，用家族史诗映射美国社会变迁；《现代启示录》则以越战为背景，探索人性黑暗与战争疯狂。他坚持导演中心制，将艺术表达融入商业巨制，是新好莱坞的精神领袖。</p>
+            </div>
+            <div class="figure-card">
+              <img src="/图片/马丁斯科塞斯.jpg" alt="马丁·斯科塞斯">
+              <h3>马丁·斯科塞斯</h3>
+              <p class="role">城市边缘的记录者 | 1942-</p>
+              <p class="intro">聚焦纽约底层社会与意大利裔文化，代表作《出租车司机》《愤怒的公牛》。其作品充满暴力美学与宗教隐喻，手持摄影与快速剪辑风格影响深远，擅长用类型片外壳包裹对人性的深刻剖析。</p>
+            </div>
+            <div class="figure-card">
+              <img src="/图片/史蒂文斯皮尔伯格.jpg" alt="史蒂文·斯皮尔伯格">
+              <p class="role">商业与艺术的平衡者 | 1946-</p>
+              <p class="intro">以《大白鲨》开创现代暑期大片模式，《E.T.外星人》用科幻外壳讲述童真与孤独，《辛德勒的名单》则转向严肃历史题材。他擅长将奇观叙事与情感共鸣结合，是新好莱坞向商业大片过渡的关键人物。</p>
+            </div>
+            <div class="figure-card">
+              <img src="/图片/罗伯特奥特曼.jpg" alt="罗伯特·奥特曼">
+              <p class="role">反类型片先驱 | 1925-2006</p>
+              <p class="intro">以多线叙事与即兴风格打破传统，代表作《陆军野战医院》《纳什维尔》。他摒弃英雄主义，聚焦群像的荒诞与真实，用重叠对话和松散结构挑战观众认知，定义了新好莱坞的“反主流”精神。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 标志性作品 -->
+        <div class="tab-content" id="films">
+          <div class="films-grid">
+            <div class="film-card">
+              <img src="/图片/邦妮和克莱德.jpg" alt="邦妮和克莱德">
+              <h3>邦妮和克莱德 (Bonnie and Clyde)</h3>
+              <p class="year">1967 | 美国 | 阿瑟·佩恩 导演</p>
+              <p class="intro">新好莱坞的起点，将抢劫犯塑造成反叛英雄，打破传统道德叙事。暴力场景的真实呈现与浪漫化处理形成冲突，结尾慢镜头死亡场景成为影史经典，标志着旧好莱坞规则的崩塌。</p>
+            </div>
+            <div class="film-card">
+              <img src="/图片/教父.jpg" alt="教父">
+              <h3>教父 (The Godfather)</h3>
+              <p class="year">1972 | 美国 | 弗朗西斯·福特·科波拉 导演</p>
+              <p class="intro">以黑手党家族史诗隐喻美国资本主义，马龙·白兰度的表演与戈登·威利斯的“黄金黑暗”摄影风格成为标杆。影片既保持商业吸引力，又具备文学性与社会批判，重新定义了类型片的艺术高度。</p>
+            </div>
+            <div class="film-card">
+              <img src="/图片/出租车司机.jpg" alt="出租车司机">
+              <h3>出租车司机 (Taxi Driver)</h3>
+              <p class="year">1976 | 美国 | 马丁·斯科塞斯 导演</p>
+              <p class="intro">讲述越战老兵特拉维斯在纽约黑夜中的孤独与疯狂，罗伯特·德尼罗的“你在跟我说话吗”成为反叛符号。影片用肮脏的城市景观映射社会病态，是新好莱坞对时代焦虑的最尖锐表达。</p>
+            </div>
+            <div class="film-card">
+              <img src="/图片/大白鲨.png" alt="大白鲨">
+              <h3>大白鲨 (Jaws)</h3>
+              <p class="year">1975 | 美国 | 史蒂文·斯皮尔伯格 导演</p>
+              <p class="intro">首部“暑期大片”，用有限的鲨鱼镜头与约翰·威廉姆斯的配乐制造极致悬念。影片开创了高概念、大投入、全球发行的商业模式，标志着新好莱坞向现代商业电影的转型。</p>
+            </div>
+            <div class="film-card">
+              <img src="/图片/星球大战.jpg" alt="星球大战">
+              <h3>星球大战 (Star Wars)</h3>
+              <p class="year">1977 | 美国 | 乔治·卢卡斯 导演</p>
+              <p class="intro">太空歌剧的复兴之作，将特效技术与神话叙事结合，开创了电影IP宇宙的先河。影片的巨大成功让好莱坞转向特效大片，也间接终结了导演主导的新好莱坞时代，具有矛盾的历史意义。</p>
+            </div>
+            <div class="film-card">
+              <img src="/图片/现代启示录.jpg" alt="现代启示录">
+              <h3>现代启示录 (Apocalypse Now)</h3>
+              <p class="year">1979 | 美国 | 弗朗西斯·福特·科波拉 导演</p>
+              <p class="intro">以康拉德小说《黑暗的心》为蓝本重构越战，“我喜欢清晨汽油弹的味道”成为经典台词。影片拍摄过程充满疯狂与混乱，最终以荒诞影像揭示战争对人性的异化，是新好莱坞野心的巅峰。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 风格与变革 -->
+        <div class="tab-content" id="technology">
+          <div class="tech-grid">
+            <div class="tech-card">
+              <h3><i class="fas fa-user-circle"></i> 创作权力转移</h3>
+              <ul>
+                <li>从“制片厂主导”到“导演中心制”，年轻导演获得最终剪辑权。</li>
+                <li>“电影学院派”崛起：南加州大学、纽约大学等院校培养的导演成为主力。</li>
+                <li>个人表达优先：作品融入导演成长经历与社会观点（如斯科塞斯的纽约记忆）。</li>
+              </ul>
+            </div>
+            <div class="tech-card">
+              <h3><i class="fas fa-camera-retro"></i> 形式语言革新</h3>
+              <ul>
+                <li>视觉风格：手持摄影（《出租车司机》）、自然光源（《教父》）、长镜头（《现代启示录》）。</li>
+                <li>叙事结构：非线形叙事（《午夜牛郎》）、开放式结局（《逍遥骑士》）、多线交织（《纳什维尔》）。</li>
+                <li>声音设计：环境音效的真实还原，配乐与剧情的反讽性结合（如《发条橙》的古典乐）。</li>
+              </ul>
+            </div>
+            <div class="tech-card">
+              <h3><i class="fas fa-theater-masks"></i> 主题与人物转型</h3>
+              <ul>
+                <li>反英雄主角：不再是完美英雄，而是充满缺陷的边缘人（特拉维斯、迈克尔·柯里昂）。</li>
+                <li>社会批判：直面越战、种族歧视、性解放等时代议题，打破“政治正确”束缚。</li>
+                <li>类型片解构：颠覆西部片（《逍遥骑士》）、黑帮片（《教父》）的传统套路。</li>
+              </ul>
+            </div>
+            <div class="tech-card">
+              <h3><i class="fas fa-industry"></i> 产业模式演变</h3>
+              <ul>
+                <li>独立制片兴起：小成本电影获得更多机会，与大制片厂形成互补。</li>
+                <li>大片时代开端：《大白鲨》《星球大战》推动高预算、高回报的商业模式。</li>
+                <li>全球市场拓展：电影成为美国文化输出的核心载体，海外票房占比大幅提升。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 历史意义 -->
+      <section class="silent-film-section significance-section">
+        <h2 class="section-title"><i class="fas fa-monument"></i> 历史意义</h2>
+        <div class="section-content">
+          <div class="significance-grid">
+            <div class="significance-item">
+              <h3><i class="fas fa-pencil-alt"></i> 确立导演作者地位</h3>
+              <p>新好莱坞首次让导演成为电影的“作者”，个人风格与创作理念被视为作品核心，这一理念延续至今，影响了全球电影的创作生态。</p>
+            </div>
+            <div class="significance-item">
+              <h3><i class="fas fa-balance-scale"></i> 平衡艺术与商业</h3>
+              <p>证明了严肃的艺术表达与商业成功可以共存，《教父》《出租车司机》等作品既获票房认可，又被奉为艺术经典，为后世电影提供了创作范本。</p>
+            </div>
+            <div class="significance-item">
+              <h3><i class="fas fa-mirror"></i> 电影与社会的对话</h3>
+              <p>让电影成为反映社会现实、批判时代问题的媒介，不再是单纯的娱乐工具，而是具备社会影响力的“第七艺术”，强化了电影的文化属性。</p>
+            </div>
+            <div class="significance-item">
+              <h3><i class="fas fa-road"></i> 连接新旧好莱坞</h3>
+              <p>既打破了旧制片厂制度的僵化，又为现代好莱坞的商业体系奠定了基础，是电影工业从古典到现代的关键转折点，影响延续至今。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- 返回顶部按钮 -->
+  <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+
+  <!-- 复用统一JS文件 -->
+  <script src="/JS/silent-film.js"></script>
+</body>
+</html>
